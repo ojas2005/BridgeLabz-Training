@@ -13,6 +13,7 @@ public class evenSum {
             }
 
         }
-        System.err.println(evenSum);
+        sc.close();
+        System.out.println(evenSum);
     }
 }

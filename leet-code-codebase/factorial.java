@@ -12,7 +12,7 @@ public class factorial {
             n = n*(i-1);
             i--;
         }
-        System.err.print(n);
+        System.out.print(n);
         }
         sc.close();
      
