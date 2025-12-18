@@ -1,0 +1,15 @@
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/bin/Debug/net8.0/CoreCSharpPractice
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/bin/Debug/net8.0/CoreCSharpPractice.deps.json
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/bin/Debug/net8.0/CoreCSharpPractice.runtimeconfig.json
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/bin/Debug/net8.0/CoreCSharpPractice.dll
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/bin/Debug/net8.0/CoreCSharpPractice.pdb
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.AssemblyInfoInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.AssemblyInfo.cs
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.csproj.CoreCompileInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.sourcelink.json
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.dll
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/refint/CoreCSharpPractice.dll
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.pdb
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/CoreCSharpPractice.genruntimeconfig.cache
+/Users/ojastiwari/BridgeLabz-Training/core-csharp-practice/leet-code-practice/CoreCSharpPractice/obj/Debug/net8.0/ref/CoreCSharpPractice.dll
