@@ -38,7 +38,7 @@ class DataTypes{
         double num = 10.342;
         int value = (int) num;
         Console.WriteLine(num); //output = 10.342
-        Console.WriteLine(value); // output = 10.
+        Console.WriteLine(value); // output = 10
 
         //Type Casting Methods in C#.
         int newNum = 23;
