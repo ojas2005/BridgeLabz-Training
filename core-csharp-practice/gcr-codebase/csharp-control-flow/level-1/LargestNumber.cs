@@ -18,4 +18,4 @@ class LargestNumber{
     Console.WriteLine($"Is the third number the largest? {(number3 > number2 ) && (number3 > number1)}"); //if both conditions are true we will get true,if any one of the condition is false it'll result false.
     }
 }
-    
+     

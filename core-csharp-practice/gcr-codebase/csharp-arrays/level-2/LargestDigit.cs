@@ -19,7 +19,7 @@ class LargestDigit{
                 break;
             }
         }
-        //setting largest and second largest elements as 0.
+        //setting largest and second largest elements as -1.
         int largestElement = -1;
         int secondLargestElement = -1;
         for(int i = 0;i<index;i++)
