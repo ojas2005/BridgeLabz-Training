@@ -12,7 +12,7 @@ class EduQuiz{
     }
     static void Main()
     {
-        int numberOfQuestions = 2;
+        int numberOfQuestions = 10;
         string[] correctAnswer = new string[numberOfQuestions];
         string[] answer = new string[numberOfQuestions];
         int marks = 0;
