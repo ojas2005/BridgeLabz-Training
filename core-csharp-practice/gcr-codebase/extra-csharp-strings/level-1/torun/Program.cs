@@ -1,38 +1,22 @@
 ﻿using System;
-class MaxOfThree{
-    public static int[] Largest(int number1, int number2, int number3){
 
-        int[] result = new int[2];
-        int largest = number1;
-        int smallest=number1;
-        if(number2>largest)
-        {
-            largest=number2;
-        }
-        if(number3>largest)
-        {
-            largest = number3;
-        }
-        if(number2<smallest)
-        {
-            smallest=number2;
-        }
-        if(number3<smallest)
-        {
-            smallest=number3;
-        }
-        result[0] = largest;
-        result[1] = smallest;
-        return result;
-    }
-    static void Main()
+class VowelConsonantCount
+{
+   static void Main()
     {
-        int number1 = int.Parse(Console.ReadLine());
-        int number2 = int.Parse(Console.ReadLine());
-        int number3 = int.Parse(Console.ReadLine());
-        
-        int[] result = Largest(number1,number2,number3);
-        Console.WriteLine($"Largest Number is {result[0]}");
+        string str=Console.ReadLine().ToLower(); //a and A both are vowels so taking lowecase for ease.
+        int vow = 0,cons=0; //counter for vowels and consonants
+        for (int i=0;i<str.Length;i++)
+        {
+            if (str[i]>='a'&&str[i]<='z') //only checks for english alphabets
+            {
+                if ("aeiou".Contains(str[i])) //to check vowels
+                    vow++;
+                else //to check consonants
+                    cons++;
+            }
+        }
+        Console.WriteLine("total number of vowels is" + vow);
+        Console.WriteLine("total number of consonants is " + cons);
     }
-
 }
