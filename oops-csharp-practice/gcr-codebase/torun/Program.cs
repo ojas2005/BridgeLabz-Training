@@ -1,74 +1,40 @@
 ﻿using System;
-class University
+class UniversityStudentManagement
     {
         static void Main(string[] args)
         {
-            student s1 = new student();
-            student s2 = new student(0002, "madhav", 8.5);
-            PostgraduateStudent s3 = new PostgraduateStudent();
+            Student s1=new Student("Amit",21,"B");
 
-            //using the display method in main
-            s1.Display();
-            s2.Display();
-            s3.display();
-        }
-
-    }
-
-    public class student
-    {
-        //creating the attributes
-        public long rollNumber;
-        protected string name;
-        private double cgpa;
-        // creating constructors
-        public student()
-        {
-            this.name = "ELON";
-            this.rollNumber = 37;
-            this.cgpa = 8.2;
-        }
-        public student(long rollNumber,string name,double cgpa)
-        {
-            this.name = name;
-            this.rollNumber = rollNumber;
-            this.cgpa = cgpa;
-        }
-        // getter and setter for private 
-        public double GetCgpa()
-        {
-            return cgpa;
-        }
-        
-        public void SetCgpa(double cgpa)
-        {
-            if (cgpa>=0 && cgpa<=10)
+            if (s1 is Student)
             {
-                this.cgpa=cgpa;
+                s1.Show();
             }
-            else
-            {
-                Console.WriteLine("enter valid cgpa");
-            }
-        }
 
-        public void Display()
-        {
-            double cgpa = GetCgpa();
-            Console.WriteLine($"Student {name} with roll number {rollNumber} has {cgpa}cgpa");
+            Student.ShowTotal();
         }
-
     }
-
-    public class PostgraduateStudent : student
+    public class Student
     {
-        public PostgraduateStudent() : base(43, "Steve", 6.92)
+        public static string UniversityName="GLA University";
+        static int count=0;
+        public readonly int rollNo;
+        string studentName;
+        string studentGrade;
+        public Student(string studentName,int rollNo,string studentGrade)
         {
-
+            this.studentName=studentName;
+            this.rollNo=rollNo;
+            this.studentGrade=studentGrade;
+            count++;
         }
-        // display method for child class
-        public void display()
+        public static void ShowTotal()
         {
-            Console.WriteLine("the name of the student is " + name + " with roll number " + rollNumber + " and the cgpa of " + GetCgpa());
+            Console.WriteLine($"total students are {count}");
+        }
+        public void Show()
+        {
+            Console.WriteLine($"Student name is {studentName}");
+            Console.WriteLine($"Student roll number is {rollNo}");
+            Console.WriteLine($"grade is {studentGrade}");
         }
     }
