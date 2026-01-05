@@ -8,7 +8,7 @@ class InvoiceGenerator{
     }
 
     static int GetTotalAmount(string[] tasks){
-        int total=0;
+    int total=0;
     for(int i = 0;i<tasks.Length;i++)
     {
         string taskWithoutExtraSpace =  tasks[i].Trim(); //to remove extra spaces in front or end like-" webpage - 4000 INR" will become "webpage - 4000 INR"
