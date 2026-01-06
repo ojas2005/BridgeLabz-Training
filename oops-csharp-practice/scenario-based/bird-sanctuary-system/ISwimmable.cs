@@ -1,0 +1,4 @@
+interface ISwimmable
+{
+    void Swim();
+}
