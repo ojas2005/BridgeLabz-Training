@@ -20,3 +20,12 @@ namespace BridgelabzTraining.inheritence.hierarchical_inheritence.BankAccountTyp
         }
     }
 }
+//search- name,city
+field- nameof,phone,city,email
+add
+update
+delete
+search
+add(by name)
+by search()
+show details
