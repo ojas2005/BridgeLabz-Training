@@ -5,4 +5,5 @@ public interface IEmployee
     void MarkAttendance();
     void CalculateTodayWage();
     void CalculateMonthlyWage();
+    void CalculateWageWithCondition();
 }

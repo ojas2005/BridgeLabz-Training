@@ -2,20 +2,20 @@ using System;
 
 class EmployeeUtilityImpl : IEmployee
 {
-    private Employee[] employee = new Employee[100];
+    private Employee[] employee=new Employee[100];
     private int count=0;
     public void AddEmployee()
     {
-        Employee emp = new Employee();
+        Employee emp=new Employee();
         Console.Write("enter employee id: ");
-        emp.EmployeeId = Console.ReadLine();
+        emp.EmployeeId=Console.ReadLine();
         Console.Write("salary: ");
-        emp.EmployeeSalary = Convert.ToDouble(Console.ReadLine());
+        emp.EmployeeSalary=Convert.ToDouble(Console.ReadLine());
         Console.Write("email: ");
-        emp.EmployeeEmail = Console.ReadLine();
+        emp.EmployeeEmail=Console.ReadLine();
         Console.Write("phone: ");
-        emp.EmployeePhone = Console.ReadLine();
-        employee[count] = emp;
+        emp.EmployeePhone=Console.ReadLine();
+        employee[count]=emp;
         count++;
         Console.WriteLine("employee added successfully");
     }
@@ -42,8 +42,8 @@ class EmployeeUtilityImpl : IEmployee
         }
         DisplayEmployees();
         Console.Write("enter employee number: ");
-        int index = int.Parse(Console.ReadLine()) - 1;
-        string status = GetAttendance();
+        int index=int.Parse(Console.ReadLine()) - 1;
+        string status=GetAttendance();
         Console.WriteLine("attendance: " + status);
         if (status == "Present")
             Console.WriteLine("today wage: " + CalculateWage());
@@ -59,8 +59,8 @@ class EmployeeUtilityImpl : IEmployee
         }
         DisplayEmployees();
         Console.Write("enter employee number: ");
-        int index = int.Parse(Console.ReadLine())-1;
-        string status = GetAttendance();
+        int index=int.Parse(Console.ReadLine())-1;
+        string status=GetAttendance();
         Console.WriteLine("attendance: " + status);
         if (status == "Present")
             Console.WriteLine("today wage: " + CalculateWage());
@@ -69,15 +69,15 @@ class EmployeeUtilityImpl : IEmployee
     }
     private string GetAttendance()
     {
-        Random r = new Random();
+        Random r=new Random();
         return r.Next(0, 2) == 0 ? "Absent" : "Present";
     }
 
     private int CalculateWage()
     {
-        int perHourWage = 20;
-        int totalHours = 8;
-        return perHourWage * totalHours;
+        int perHourWage=20;
+        int totalHours=8;
+        return perHourWage*totalHours;
     }
     public void CalculateMonthlyWage()
     {
@@ -88,9 +88,9 @@ class EmployeeUtilityImpl : IEmployee
     }
     DisplayEmployees();
     Console.Write("enter employee number: ");
-    int index = int.Parse(Console.ReadLine()) - 1;
+    int index=int.Parse(Console.ReadLine())-1;
     int workingDays=20;
-    int presentDays = 0;
+    int presentDays=0;
     for (int i=1;i<=workingDays;i++)
     {
         if (GetAttendance()=="Present")
@@ -98,10 +98,46 @@ class EmployeeUtilityImpl : IEmployee
             presentDays++;
         }
     }
-    int perDayWage = CalculateWage();
-    int monthlyWage = presentDays * perDayWage;
+    int perDayWage=CalculateWage();
+    int monthlyWage=presentDays*perDayWage;
     Console.WriteLine($"employee present days: {presentDays}");
     Console.WriteLine($"monthly wage: {monthlyWage}");
 }
+public void CalculateWageWithCondition()
+{
+    if (count==0)
+    {
+        Console.WriteLine("add employee first");
+        return;
+    }
+    DisplayEmployees();
+    Console.Write("enter employee number: ");
+    int index=int.Parse(Console.ReadLine())-1;
+    int maxWorkingDays=20;
+    int maxWorkingHours=100;
+    int totalDays=0;
+    int totalHours=0;
+    int totalWage=0;
+    while (totalDays<maxWorkingDays&&totalHours<maxWorkingHours)
+    {
+        string attendance=GetAttendance();
+        int dailyHours=0;
+        if(attendance=="Present")
+        {
+            dailyHours=8;
+        }
+        if(totalHours+dailyHours>maxWorkingHours)
+        {
+            dailyHours=maxWorkingHours-totalHours;
+        }
+        totalHours+=dailyHours;
+        totalDays++;
+        totalWage+=dailyHours*20;
+    }
+    Console.WriteLine($"total working days: {totalDays}");
+    Console.WriteLine($"total working hours: {totalHours}");
+    Console.WriteLine($"total wage: {totalWage}");
+}
+
 
 }

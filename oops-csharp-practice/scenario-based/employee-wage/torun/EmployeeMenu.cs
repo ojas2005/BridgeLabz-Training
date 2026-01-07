@@ -1,13 +1,11 @@
 sealed class EmployeeMenu
 {
     private IEmployee empUtility;
-
     public EmployeeMenu()
     {
         empUtility = new EmployeeUtilityImpl();
         ShowMenu();
     }
-
     private void ShowMenu()
     {
         int choice;
@@ -20,11 +18,9 @@ sealed class EmployeeMenu
             Console.WriteLine("press 4 to mark attendance");
             Console.WriteLine("press 5 for part time wages");
             Console.WriteLine("press 6 for monthly wages");
-
+            Console.WriteLine("press 7 for monthly wages with conditions");
             Console.WriteLine("press 9 to exit");
-
             choice = int.Parse(Console.ReadLine());
-
             switch (choice)
             {
                 case 1:
@@ -44,6 +40,9 @@ sealed class EmployeeMenu
                     break;
                 case 6:
                     empUtility.CalculateMonthlyWage();
+                    break;
+                case 7:
+                    empUtility.CalculateWageWithCondition();
                     break;
 
 
