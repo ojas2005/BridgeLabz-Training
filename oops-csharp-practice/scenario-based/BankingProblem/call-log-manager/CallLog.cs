@@ -7,13 +7,13 @@ class CallLog
     public DateTime Timestamp { get; set; }
 }
 
-class Main
+class Program
 {
     static CallLog[] logs = new CallLog[100];
     static int logCount = 0;
     static string currentUser = "";
 
-    static void MainMethod()
+    static void Main()
     {
         Login();
         ShowMenu();
