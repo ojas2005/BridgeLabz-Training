@@ -79,4 +79,29 @@ class EmployeeUtilityImpl : IEmployee
         int totalHours = 8;
         return perHourWage * totalHours;
     }
+    public void CalculateMonthlyWage()
+    {
+    if (count==0)
+    {
+        Console.WriteLine("add employee first");
+        return;
+    }
+    DisplayEmployees();
+    Console.Write("enter employee number: ");
+    int index = int.Parse(Console.ReadLine()) - 1;
+    int workingDays=20;
+    int presentDays = 0;
+    for (int i=1;i<=workingDays;i++)
+    {
+        if (GetAttendance()=="Present")
+        {
+            presentDays++;
+        }
+    }
+    int perDayWage = CalculateWage();
+    int monthlyWage = presentDays * perDayWage;
+    Console.WriteLine($"employee present days: {presentDays}");
+    Console.WriteLine($"monthly wage: {monthlyWage}");
+}
+
 }
