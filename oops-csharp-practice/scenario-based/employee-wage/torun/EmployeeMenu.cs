@@ -18,7 +18,8 @@ sealed class EmployeeMenu
             Console.WriteLine("press 2 to check today wage");
             Console.WriteLine("press 3 to display employees");
             Console.WriteLine("press 4 to mark attendance");
-            Console.WriteLine("press 5 to exit");
+            Console.WriteLine("press 5 for part time wages");
+            Console.WriteLine("press 9 to exit");
 
             choice = int.Parse(Console.ReadLine());
 
@@ -37,6 +38,9 @@ sealed class EmployeeMenu
                     empUtility.MarkAttendance();
                     break;
                 case 5:
+                    empUtility.DisplayEmployees();
+                    break;
+                case 9:
                     return;
             }
         } while (choice != 5);
