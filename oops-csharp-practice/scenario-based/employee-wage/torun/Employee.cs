@@ -7,6 +7,6 @@ public class Employee
 
     public override string ToString()
     {
-        return   EmployeeId + EmployeeSalary + EmployeeEmail + EmployeePhone;
+        return  $"employee id is {EmployeeId} salary: {EmployeeSalary} mail id: {EmployeeEmail} phone number: {EmployeePhone}";
     }
 }

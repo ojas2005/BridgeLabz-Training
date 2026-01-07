@@ -1,5 +1,5 @@
-interface IEmployee
+public interface IEmployee
 {
     Employee AddEmployee();
-    Employee Attendace();
+    string Attendace(Employee emp);
 }

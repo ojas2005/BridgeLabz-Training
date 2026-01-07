@@ -1,20 +1,17 @@
-using System;
-class EmployeeUtilityImpl : IEmployee{
-    private Employee employee ;
-    public Employee AddEmployee(){
-        employee = new Employee();
-        return employee;
+class EmployeeUtilityImpl : IEmployee
+{
+    public Employee AddEmployee()
+    {
+        return new Employee();
     }
-    public void Attendace()
+    public string Attendace(Employee emp)
     {
         Random r = new Random();
-        int n = r.Next(0,1);
-        if(n==0)
-        {
-            Console.WriteLine("Absent");
-        } 
-        else{
-            Console.WriteLine("Present");
-        }
+        int n = r.Next(0,2);
+
+        if (n==0)
+            return "Absent";
+
+        return "Present";
     }
 }
