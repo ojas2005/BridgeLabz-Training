@@ -1,5 +1,7 @@
 public interface IEmployee
 {
-    Employee AddEmployee();
-    string Attendace(Employee emp);
+    void AddEmployee();
+    void DisplayEmployees();
+    void MarkAttendance();
+    void CalculateTodayWage();
 }
