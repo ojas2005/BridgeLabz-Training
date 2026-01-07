@@ -43,6 +43,6 @@ sealed class EmployeeMenu
                 case 9:
                     return;
             }
-        } while (choice != 5);
+        } while(choice!=5);
     }
 }
