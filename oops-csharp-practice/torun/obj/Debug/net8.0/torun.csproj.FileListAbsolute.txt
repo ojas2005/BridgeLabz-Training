@@ -1,0 +1,5 @@
+/Users/ojastiwari/BridgeLabz-Training/oops-csharp-practice/torun/obj/Debug/net8.0/torun.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ojastiwari/BridgeLabz-Training/oops-csharp-practice/torun/obj/Debug/net8.0/torun.AssemblyInfoInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/oops-csharp-practice/torun/obj/Debug/net8.0/torun.AssemblyInfo.cs
+/Users/ojastiwari/BridgeLabz-Training/oops-csharp-practice/torun/obj/Debug/net8.0/torun.csproj.CoreCompileInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/oops-csharp-practice/torun/obj/Debug/net8.0/torun.sourcelink.json
