@@ -12,9 +12,10 @@ public class Menu
             Console.WriteLine("press 2 to sort books by title");
             Console.WriteLine("press 3 to sort books by author");
             Console.WriteLine("press 4 to show all books");
+            Console.WriteLine("press 5 to update a book");
             Console.WriteLine("press 6 to exit");
             Console.WriteLine();
-            Console.Write("enter your choice: ");
+            Console.Write("enter your choice:");
             int choice= int.Parse(Console.ReadLine());
 
             switch(choice)
@@ -33,6 +34,9 @@ public class Menu
                     break;
                 case 4:
                     Utility.ShowAllBooks();
+                    break;
+                case 5:
+                    Utility.UpdateBook();
                     break;
                 case 6:
                     return;

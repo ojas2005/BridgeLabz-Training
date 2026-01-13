@@ -1,16 +1,22 @@
 public class Utility{
-    static List<Book> books=new List<Book>();
+    static Book[] books=new Book[100];
+    static int bookCount = 0;
+
     public static void AddABook(Book book)
     {
-        books.Add(book);
-        book.Display();
-        Console.WriteLine("added this book.");
-        Console.WriteLine();
+        if(bookCount<books.Length)
+        {
+            books[bookCount] = book;
+            bookCount++;
+            book.Display();
+            Console.WriteLine("added this book.");
+            Console.WriteLine();
+        }
     }
     public static void SortByName(){
-        for(int i = 0;i<books.Count-1;i++)
+        for(int i = 0;i<bookCount-1;i++)
         {
-            for(int j = i+1;j<books.Count-1;j++)
+            for(int j = i+1;j<bookCount;j++)
             {
                 if(string.Compare(books[i].title,books[j].title)>0)
                 {
@@ -23,9 +29,9 @@ public class Utility{
         Console.WriteLine("we have sorted the books by book title");
     }
     public static void SortByAuthor(){
-        for(int i = 0;i<books.Count-1;i++)
+        for(int i = 0;i<bookCount-1;i++)
         {
-            for(int j = i+1;j<books.Count;j++)
+            for(int j = i+1;j<bookCount;j++)
             {
                 if(string.Compare(books[i].author,books[j].author)>0)
                 {
@@ -39,10 +45,33 @@ public class Utility{
     }
     public static void ShowAllBooks()
     {
-        foreach(Book book in books)
+        for(int i = 0; i<bookCount; i++)
         {
-            book.Display();
+            books[i].Display();
             Console.WriteLine();
         }
     }
+    public static void UpdateBook()
+    {
+        Console.Write("enter title of book to update: ");
+        string searchTitle=Console.ReadLine();
+        for(int i=0;i<bookCount;i++)
+        {
+            if(books[i].title.ToLower()==searchTitle.ToLower())
+            {
+                Console.Write("enter new title: ");
+                books[i].title=Console.ReadLine();
+                Console.Write("enter new author: ");
+                books[i].author=Console.ReadLine();
+                Console.Write("enter new price: ");
+                books[i].price=Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("book updated");
+                Console.WriteLine();
+                return;
+            }
+        }
+        Console.WriteLine("book not found");
+        Console.WriteLine();
+    }
+
 }
