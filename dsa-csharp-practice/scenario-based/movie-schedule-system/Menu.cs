@@ -8,16 +8,15 @@ namespace MovieTicketBookingSystem
 
         public void start()
         {
-            bool active=true;
-            while(active)
+            
+            while(true)
             {
                 Console.WriteLine();
                 Console.WriteLine("movie ticket booking system");
                 Console.WriteLine("press 1 to login as admin");
                 Console.WriteLine("press 2 to continue as user");
                 Console.WriteLine("press 3 to exit");
-                Console.Write("choose option: ");
-
+                Console.Write("choose option:");
                 int choice;
                 if(!int.TryParse(Console.ReadLine(),out choice))
                 {
@@ -34,16 +33,13 @@ namespace MovieTicketBookingSystem
                         userMenu();
                         break;
                     case 3:
-                        active=false;
-                        Console.WriteLine("exit");
-                        break;
+                        return;
                     default:
                         Console.WriteLine("invalid choice");
                         break;
                 }
             }
         }
-
         private void adminMenu()
         {
             Console.Write("enter admin pin: ");
@@ -52,15 +48,13 @@ namespace MovieTicketBookingSystem
                 Console.WriteLine("invalid pin");
                 return;
             }
-
             if(!manager.validateAdmin(pin))
             {
                 Console.WriteLine("wrong pin");
                 return;
             }
-
-            bool inAdmin=true;
-            while(inAdmin)
+            
+            while(true)
             {
                 Console.WriteLine();
                 Console.WriteLine("admin menu");
@@ -98,11 +92,10 @@ namespace MovieTicketBookingSystem
                 }
             }
         }
-
         private void userMenu()
         {
-            bool inUser=true;
-            while(inUser)
+            
+            while(true)
             {
                 Console.WriteLine();
                 Console.WriteLine("user menu");
@@ -110,7 +103,6 @@ namespace MovieTicketBookingSystem
                 Console.WriteLine("press 2 to search movie");
                 Console.WriteLine("press 3 to exit");
                 Console.Write("choose option: ");
-
                 if(!int.TryParse(Console.ReadLine(),out int opt))
                 {
                     Console.WriteLine("invalid input");
