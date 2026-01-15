@@ -172,6 +172,70 @@ namespace AddressBookApp
                 contacts[i].Display();
             }
         }
+        public void SortByFirstName()
+        {
+            for(int i=0;i<count-1;i++)
+            {
+                for(int j=i+1;j<count;j++)
+                {
+                    if(string.Compare(contacts[i].FirstName,contacts[j].FirstName)>0)
+                    {
+                        ContactPerson temp=contacts[i];
+                        contacts[i]=contacts[j];
+                        contacts[j]=temp;
+                    }
+                }
+            }
+        }
+        public void SortByCity()
+        {
+            for(int i=0;i<count-1;i++)
+            {
+                for(int j=i+1;j<count;j++)
+                {
+                    if(string.Compare(contacts[i].City,contacts[j].City)>0)
+                    {
+                        ContactPerson temp=contacts[i];
+                        contacts[i]=contacts[j];
+                        contacts[j]=temp;
+                    }
+                }
+            }
+        }
+        public void SortByState()
+        {
+            for(int i=0;i<count-1;i++)
+            {
+                for(int j=i+1;j<count;j++)
+                {
+                    if(string.Compare(contacts[i].State,contacts[j].State)>0)
+                    {
+                        ContactPerson temp=contacts[i];
+                        contacts[i]=contacts[j];
+                        contacts[j]=temp;
+                    }
+                }
+            }
+        }
+        public void SortByZip()
+        {
+            for(int i=0;i<count-1;i++)
+            {
+                for(int j=i+1;j<count;j++)
+                {
+                    if(string.Compare(contacts[i].Zip,contacts[j].Zip)>0)
+                    {
+                        ContactPerson temp=contacts[i];
+                        contacts[i]=contacts[j];
+                        contacts[j]=temp;
+                    }
+                }
+            }
+        }
+
+
+
+
     }
 
 }

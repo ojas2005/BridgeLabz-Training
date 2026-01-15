@@ -81,7 +81,8 @@ public class ContactService
             Console.WriteLine("press 6 to search person by city or state");
             Console.WriteLine("press 7 to to search person by state or city");
             Console.WriteLine("press 8 to search count by city or state");
-            Console.WriteLine("press 9 to exit");
+            Console.WriteLine("press 9 to sort contacts by first name,city,state,zip");
+            Console.WriteLine("press 10 to exit");
             int choice = int.Parse(Console.ReadLine());
             switch(choice)
             {
@@ -110,8 +111,12 @@ public class ContactService
                 case 8:
                     CountPersonsByCityOrState();
                     break;
-
                 case 9:
+                    SortContacts();
+                    break;
+
+
+                case 10:
                     active=false;
                     break;
                 default:
@@ -153,6 +158,35 @@ public class ContactService
             Console.WriteLine("invalid choice");
         }
     }
+    public void SortContacts()
+    {
+        Console.WriteLine("press 1 to sort by name");
+        Console.WriteLine("press 2 to sort by city");
+        Console.WriteLine("press 3 to sort by state");
+        Console.WriteLine("press 4 to sort by zip");
+        int choice=int.Parse(Console.ReadLine());
+        for(int i=0;i<bookCount;i++)
+        {
+            if(choice==1)
+            {
+                addressBooks[i].SortByFirstName();
+            }
+            else if(choice==2)
+            {
+                addressBooks[i].SortByCity();
+            }
+            else if(choice==3)
+            {
+                addressBooks[i].SortByState();
+            }
+            else if(choice==4)
+            {
+                addressBooks[i].SortByZip();
+            }
+        }
+        Console.WriteLine("contacts sorted successfully");
+    }
+
 
 
     private void AppendContact(ContactDirectory dir)
