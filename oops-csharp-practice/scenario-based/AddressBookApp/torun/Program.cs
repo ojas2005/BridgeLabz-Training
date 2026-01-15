@@ -28,6 +28,7 @@ namespace AddressBookApp
             addressBook.InsertContact(person);
             Console.WriteLine();
             addressBook.DisplayAllContacts();
+            addressBook.EditContact(firstName,lastName);
         }
     }
 }

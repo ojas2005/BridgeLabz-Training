@@ -26,5 +26,14 @@ public class ContactService
         directory.InsertContact(contact);
         Console.WriteLine("contact created successfully");
     }
+    public void EditContact()
+    {
+        Console.WriteLine("enter first name to edit:");
+        string fn=Console.ReadLine();
+        Console.WriteLine("enter last name to edit:");
+        string ln=Console.ReadLine();
+        directory.EditContact(fn,ln);
+    }
+
 }
 }
