@@ -80,6 +80,8 @@ public class ContactService
             Console.WriteLine("press 5 to display all contacts");
             Console.WriteLine("press 6 to search person by city or state");
             Console.WriteLine("press 7 to to search person by state or city");
+            Console.WriteLine("press 8 to search count by city or state");
+            Console.WriteLine("press 9 to exit");
             int choice = int.Parse(Console.ReadLine());
             switch(choice)
             {
@@ -106,6 +108,10 @@ public class ContactService
                     ViewPersonsByCityOrState();
                     break;
                 case 8:
+                    CountPersonsByCityOrState();
+                    break;
+
+                case 9:
                     active=false;
                     break;
                 default:
@@ -114,6 +120,40 @@ public class ContactService
             }
         }
     }
+
+    public void CountPersonsByCityOrState()
+    {
+        Console.WriteLine("press 1 to count by city");
+        Console.WriteLine("press 2 to count by state");
+        int choice=int.Parse(Console.ReadLine());
+        if(choice==1)
+        {
+            Console.WriteLine("enter city:");
+            string city=Console.ReadLine();
+            int total=0;
+            for(int i=0;i<bookCount;i++)
+            {
+                total+=addressBooks[i].CountByCity(city);
+            }
+            Console.WriteLine($"total persons in city {city}: {total}");
+        }
+        else if(choice==2)
+        {
+            Console.WriteLine("enter state:");
+            string state=Console.ReadLine();
+            int total=0;
+            for(int i=0;i<bookCount;i++)
+            {
+                total+=addressBooks[i].CountByState(state);
+            }
+            Console.WriteLine($"total persons in state {state}: {total}");
+        }
+        else
+        {
+            Console.WriteLine("invalid choice");
+        }
+    }
+
 
     private void AppendContact(ContactDirectory dir)
     {

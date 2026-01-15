@@ -108,6 +108,32 @@ namespace AddressBookApp
             }
             Console.WriteLine("contact not found");
         }
+        public int CountByCity(string city)
+        {
+            int c=0;
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].City==city)
+                {
+                    c++;
+                }
+            }
+            return c;
+        }
+        public int CountByState(string state)
+        {
+            int c=0;
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].State==state)
+                {
+                    c++;
+                }
+            }
+            return c;
+}
+
+
 
         public void DeleteContact(string firstName,string lastName)
         {
