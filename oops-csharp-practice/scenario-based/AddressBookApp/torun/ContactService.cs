@@ -3,36 +3,142 @@ namespace AddressBookApp
 {
 public class ContactService
 {
-    private ContactDirectory directory = new ContactDirectory();
-    public void AppendContact()
+    private ContactDirectory[] addressBooks = new ContactDirectory[10];
+    private string[] addressBookNames = new string[10];
+    private int bookCount = 0;
+
+    public void CreateAddressBook()
+    {
+        if(bookCount>=addressBooks.Length)
+        {
+            Console.WriteLine("cannot create more address books, storage full");
+            return;
+        }
+        Console.WriteLine("enter new address book name:");
+        string name = Console.ReadLine();
+        for(int i=0;i<bookCount;i++)
+        {
+            if(addressBookNames[i]==name)
+            {
+                Console.WriteLine("address book with this name already exists");
+                return;
+            }
+        }
+        addressBooks[bookCount]=new ContactDirectory();
+        addressBookNames[bookCount]=name;
+        bookCount++;
+        Console.WriteLine("address book created successfully");
+    }
+
+    public void UseAddressBook()
+    {
+        if(bookCount==0)
+        {
+            Console.WriteLine("no address books available");
+            return;
+        }
+        Console.WriteLine("enter address book name to open:");
+        string name = Console.ReadLine();
+        for(int i=0;i<bookCount;i++)
+        {
+            if(addressBookNames[i]==name)
+            {
+                ContactDirectory current = addressBooks[i];
+                ContactServiceDirectoryMenu(current);
+                return;
+            }
+        }
+        Console.WriteLine("address book not found");
+    }
+
+    private void ContactServiceDirectoryMenu(ContactDirectory current)
+    {
+        bool active = true;
+        while(active)
+        {
+            Console.WriteLine("press 1 to add single contact");
+            Console.WriteLine("press 2 to add multiple contacts");
+            Console.WriteLine("press 3 to edit contact");
+            Console.WriteLine("press 4 to delete contact");
+            Console.WriteLine("press 5 to display all contacts");
+            Console.WriteLine("press 6 to exit");
+            int choice = int.Parse(Console.ReadLine());
+            switch(choice)
+            {
+                case 1:
+                    AppendContact(current);
+                    break;
+                case 2:
+                    AppendMultipleContacts(current);
+                    break;
+                case 3:
+                    EditContact(current);
+                    break;
+                case 4:
+                    DeleteContact(current);
+                    break;
+                case 5:
+                    current.DisplayAllContacts();
+                    break;
+                case 6:
+                    active=false;
+                    break;
+                default:
+                    Console.WriteLine("choose valid option");
+                    break;
+            }
+        }
+    }
+
+    private void AppendContact(ContactDirectory dir)
     {
         Console.WriteLine("enter first name:");
-        string fn = Console.ReadLine();
+        string fn=Console.ReadLine();
         Console.WriteLine("enter last name:");
-        string ln = Console.ReadLine();
+        string ln=Console.ReadLine();
         Console.WriteLine("enter address:");
-        string addr = Console.ReadLine();
+        string addr=Console.ReadLine();
         Console.WriteLine("enter city:");
-        string city = Console.ReadLine();
+        string city=Console.ReadLine();
         Console.WriteLine("enter state:");
-        string state = Console.ReadLine();
+        string state=Console.ReadLine();
         Console.WriteLine("enter zip:");
-        string zip = Console.ReadLine();
+        string zip=Console.ReadLine();
         Console.WriteLine("enter phone number:");
-        string phone = Console.ReadLine();
+        string phone=Console.ReadLine();
         Console.WriteLine("enter email:");
-        string email = Console.ReadLine();
+        string email=Console.ReadLine();
         ContactPerson contact = new ContactPerson(fn, ln, addr, city, state, zip, phone, email);
-        directory.InsertContact(contact);
-        Console.WriteLine("contact created successfully");
+        dir.InsertContact(contact);
     }
-    public void EditContact()
+
+    private void AppendMultipleContacts(ContactDirectory dir)
+    {
+        Console.WriteLine("how many contacts do you want to add?");
+        int qty=int.Parse(Console.ReadLine());
+        for(int i=0;i<qty;i++)
+        {
+            Console.WriteLine($"entering details for contact {i+1}");
+            AppendContact(dir);
+        }
+    }
+
+    private void EditContact(ContactDirectory dir)
     {
         Console.WriteLine("enter first name to edit:");
         string fn=Console.ReadLine();
         Console.WriteLine("enter last name to edit:");
         string ln=Console.ReadLine();
-        directory.EditContact(fn,ln);
+        dir.EditContact(fn,ln);
+    }
+
+    private void DeleteContact(ContactDirectory dir)
+    {
+        Console.WriteLine("enter first name to delete:");
+        string fn=Console.ReadLine();
+        Console.WriteLine("enter last name to delete:");
+        string ln=Console.ReadLine();
+        dir.DeleteContact(fn,ln);
     }
 
 }

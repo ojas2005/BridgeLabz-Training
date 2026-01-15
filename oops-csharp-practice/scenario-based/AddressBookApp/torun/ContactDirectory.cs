@@ -45,6 +45,31 @@ namespace AddressBookApp
             }
             Console.WriteLine("contact not found");
         }
+
+        public void DeleteContact(string firstName,string lastName)
+        {
+            if(count==0)
+            {
+                Console.WriteLine("no contacts available");
+                return;
+            }
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].FirstName==firstName && contacts[i].LastName==lastName)
+                {
+                    for(int j=i;j<count-1;j++)
+                    {
+                        contacts[j]=contacts[j+1];
+                    }
+                    contacts[count-1]=null;
+                    count--;
+                    Console.WriteLine("contact deleted successfully");
+                    return;
+                }
+            }
+            Console.WriteLine("contact not found");
+        }
+
         public void DisplayAllContacts()
         {
             if (count==0)
