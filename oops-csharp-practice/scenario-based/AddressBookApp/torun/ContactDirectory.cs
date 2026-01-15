@@ -41,6 +41,42 @@ namespace AddressBookApp
                 Console.WriteLine("no person found in given city or state");
             }
         }
+        public void ViewPersonsByCity(string city)
+        {
+            bool found=false;
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].City==city)
+                {
+                    contacts[i].Display();
+                    Console.WriteLine("");
+                    found=true;
+                }
+            }
+            if(!found)
+            {
+                Console.WriteLine("no persons found in this city");
+            }
+        }
+        public void ViewPersonsByState(string state)
+        {
+            bool found=false;
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].State==state)
+                {
+                    contacts[i].Display();
+                    Console.WriteLine("");
+                    found=true;
+                }
+            }
+            if(!found)
+            {
+                Console.WriteLine("no persons found in this state");
+            }
+        }
+
+
 
 
         public void EditContact(string firstName,string lastName)
