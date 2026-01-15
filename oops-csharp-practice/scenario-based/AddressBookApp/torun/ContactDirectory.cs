@@ -6,6 +6,14 @@ namespace AddressBookApp
         private int count=0;
         public void InsertContact(ContactPerson person)
         {
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].Equals(person))
+                {
+                    Console.WriteLine("duplicate contact,cannot add");
+                    return;
+                }
+            }
             if (count<contacts.Length)
             {
                 contacts[count++]=person;
@@ -16,6 +24,7 @@ namespace AddressBookApp
                 Console.WriteLine("address book is full");
             }
         }
+
         public void EditContact(string firstName,string lastName)
         {
             if(count==0)

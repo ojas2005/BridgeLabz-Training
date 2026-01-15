@@ -22,6 +22,20 @@ namespace AddressBookApp
             Phone=phone;
             Email=email;
         }
+        public override bool Equals(object obj)
+        {
+            if(obj==null || GetType()!=obj.GetType()){
+                return false;
+            }
+            ContactPerson other=(ContactPerson)obj;
+            return this.FirstName==other.FirstName && this.LastName==other.LastName;
+        }
+
+        public override int GetHashCode()
+        {
+            return (FirstName+LastName).GetHashCode();
+        }
+
         public void Display()
         {
             Console.WriteLine($"name: {FirstName} {LastName}");
