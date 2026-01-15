@@ -34,6 +34,17 @@ public class ContactService
         string ln=Console.ReadLine();
         directory.EditContact(fn,ln);
     }
+    public void AppendMultipleContacts()
+    {
+        Console.WriteLine("how many contacts do you want to add?");
+        int num=int.Parse(Console.ReadLine());
+        for(int i=0;i<num;i++)
+        {
+            Console.WriteLine($"entering details for contact {i+1}");
+            AppendContact();
+        }
+    }
+
     public void DeleteContact()
     {
         Console.WriteLine("enter first name to delete:");
@@ -42,7 +53,5 @@ public class ContactService
         string ln=Console.ReadLine();
         directory.DeleteContact(fn,ln);
     }
-
-
 }
 }

@@ -32,6 +32,9 @@ namespace AddressBookApp
             addressBook.DisplayAllContacts();
             addressBook.DeleteContact(firstName,lastName);
             addressBook.DisplayAllContacts();
+            ContactService svc=new ContactService();
+            svc.AppendMultipleContacts();
+
 
         }
     }
