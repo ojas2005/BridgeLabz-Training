@@ -1,5 +1,7 @@
 using System;
-internal class ContactService
+namespace AddressBookApp
+{
+public class ContactService
 {
     private ContactDirectory directory = new ContactDirectory();
     public void AppendContact()
@@ -20,9 +22,9 @@ internal class ContactService
         string phone = Console.ReadLine();
         Console.WriteLine("enter email:");
         string email = Console.ReadLine();
-        Contact contact = new Contact(fn, ln, addr, city, state, zip, phone, email);
+        ContactPerson contact = new ContactPerson(fn, ln, addr, city, state, zip, phone, email);
         directory.InsertContact(contact);
         Console.WriteLine("contact created successfully");
     }
 }
-
+}
