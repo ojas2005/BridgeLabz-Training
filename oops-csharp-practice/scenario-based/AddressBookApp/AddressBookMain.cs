@@ -29,6 +29,9 @@ namespace AddressBookApp
             Console.WriteLine();
             addressBook.DisplayAllContacts();
             addressBook.EditContact(firstName,lastName);
+            addressBook.DisplayAllContacts();
+            addressBook.DeleteContact(firstName,lastName);
+            addressBook.DisplayAllContacts();
 
         }
     }

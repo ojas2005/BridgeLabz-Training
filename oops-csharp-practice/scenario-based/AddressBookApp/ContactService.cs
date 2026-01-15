@@ -34,6 +34,15 @@ public class ContactService
         string ln=Console.ReadLine();
         directory.EditContact(fn,ln);
     }
+    public void DeleteContact()
+    {
+        Console.WriteLine("enter first name to delete:");
+        string fn=Console.ReadLine();
+        Console.WriteLine("enter last name to delete:");
+        string ln=Console.ReadLine();
+        directory.DeleteContact(fn,ln);
+    }
+
 
 }
 }
