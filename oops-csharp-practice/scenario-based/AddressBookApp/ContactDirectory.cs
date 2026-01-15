@@ -24,6 +24,24 @@ namespace AddressBookApp
                 Console.WriteLine("address book is full");
             }
         }
+        public void SearchByCityOrState(string value)
+        {
+            bool found=false;
+            for(int i=0;i<count;i++)
+            {
+                if(contacts[i].City==value || contacts[i].State==value)
+                {
+                    contacts[i].Display();
+                    Console.WriteLine("");
+                    found=true;
+                }
+            }
+            if(!found)
+            {
+                Console.WriteLine("no person found in given city or state");
+            }
+        }
+
 
         public void EditContact(string firstName,string lastName)
         {

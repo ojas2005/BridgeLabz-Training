@@ -30,6 +30,23 @@ public class ContactService
         Console.WriteLine("address book created successfully");
     }
 
+    public void SearchPersonByCityOrState()
+    {
+        Console.WriteLine("enter city or state:");
+        string value=Console.ReadLine();
+        if(bookCount==0)
+        {
+            Console.WriteLine("no address books available");
+            return;
+        }
+        for(int i=0;i<bookCount;i++)
+        {
+            Console.WriteLine($"address book: {addressBookNames[i]}");
+            addressBooks[i].SearchByCityOrState(value);
+        }
+    }
+
+
     public void UseAddressBook()
     {
         if(bookCount==0)
@@ -61,7 +78,8 @@ public class ContactService
             Console.WriteLine("press 3 to edit contact");
             Console.WriteLine("press 4 to delete contact");
             Console.WriteLine("press 5 to display all contacts");
-            Console.WriteLine("press 6 to exit");
+            Console.WriteLine("press 6 to search person by city or state");
+            Console.WriteLine("press 7 to exit");
             int choice = int.Parse(Console.ReadLine());
             switch(choice)
             {
@@ -81,6 +99,10 @@ public class ContactService
                     current.DisplayAllContacts();
                     break;
                 case 6:
+                    string placeName = Console.ReadLine();
+                    current.SearchByCityOrState(placeName);
+                    break;
+                case 7:
                     active=false;
                     break;
                 default:
