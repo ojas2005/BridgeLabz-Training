@@ -79,7 +79,7 @@ public class ContactService
             Console.WriteLine("press 4 to delete contact");
             Console.WriteLine("press 5 to display all contacts");
             Console.WriteLine("press 6 to search person by city or state");
-            Console.WriteLine("press 7 to exit");
+            Console.WriteLine("press 7 to to search person by state or city");
             int choice = int.Parse(Console.ReadLine());
             switch(choice)
             {
@@ -103,6 +103,9 @@ public class ContactService
                     current.SearchByCityOrState(placeName);
                     break;
                 case 7:
+                    ViewPersonsByCityOrState();
+                    break;
+                case 8:
                     active=false;
                     break;
                 default:
@@ -144,6 +147,37 @@ public class ContactService
             AppendContact(dir);
         }
     }
+    public void ViewPersonsByCityOrState()
+    {
+        Console.WriteLine("press 1 to view by city");
+        Console.WriteLine("press 2 to view by state");
+        int choice=int.Parse(Console.ReadLine());
+        if(choice==1)
+        {
+            Console.WriteLine("enter city:");
+            string city=Console.ReadLine();
+            for(int i=0;i<bookCount;i++)
+            {
+                Console.WriteLine($"address book: {addressBookNames[i]}");
+                addressBooks[i].ViewPersonsByCity(city);
+            }
+        }
+        else if(choice==2)
+        {
+            Console.WriteLine("enter state:");
+            string state=Console.ReadLine();
+            for(int i=0;i<bookCount;i++)
+            {
+                Console.WriteLine($"address book: {addressBookNames[i]}");
+                addressBooks[i].ViewPersonsByState(state);
+            }
+        }
+        else
+        {
+            Console.WriteLine("invalid choice");
+        }
+    }
+
 
     private void EditContact(ContactDirectory dir)
     {
@@ -163,5 +197,5 @@ public class ContactService
         dir.DeleteContact(fn,ln);
     }
 
-}
+    }
 }
