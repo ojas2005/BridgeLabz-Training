@@ -1,0 +1,15 @@
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/bin/Debug/net8.0/torun
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/bin/Debug/net8.0/torun.deps.json
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/bin/Debug/net8.0/torun.runtimeconfig.json
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/bin/Debug/net8.0/torun.dll
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/bin/Debug/net8.0/torun.pdb
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.AssemblyInfoInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.AssemblyInfo.cs
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.csproj.CoreCompileInputs.cache
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.sourcelink.json
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.dll
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/refint/torun.dll
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.pdb
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/torun.genruntimeconfig.cache
+/Users/ojastiwari/BridgeLabz-Training/dsa-csharp-practice/scenario-based/browers-history/torun/obj/Debug/net8.0/ref/torun.dll
