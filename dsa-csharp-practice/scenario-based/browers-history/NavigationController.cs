@@ -12,10 +12,10 @@ namespace WebNavigationApp.SessionTracking.BrowserNavigation
             while(isRunning)
             {
                 Console.WriteLine("welcome to the navigation app");
-                Console.WriteLine("press 1 to launch window");
-                Console.WriteLine("press 2 to shutdown window");
-                Console.WriteLine("press 3 to recover window");
-                Console.WriteLine("press 4 to exit");
+                Console.WriteLine("1. launch window");
+                Console.WriteLine("2. shutdown window");
+                Console.WriteLine("3. recover window");
+                Console.WriteLine("4. exit");
                 int option = Convert.ToInt32(Console.ReadLine());
 
                 switch(option)
@@ -54,10 +54,10 @@ namespace WebNavigationApp.SessionTracking.BrowserNavigation
             while(isActive)
             {
                 Console.WriteLine("window options");
-                Console.WriteLine("press 1 to navigate to location");
-                Console.WriteLine("press 2 to go to previous location");
-                Console.WriteLine("press 3 to go to next location");
-                Console.WriteLine("press 4 to exit");
+                Console.WriteLine("1. navigate to location");
+                Console.WriteLine("2. go to previous location");
+                Console.WriteLine("3. go to next location");
+                Console.WriteLine("4. exit");
 
                 int selection = Convert.ToInt32(Console.ReadLine());
 
