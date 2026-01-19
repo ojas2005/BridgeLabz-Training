@@ -409,3 +409,217 @@ Day 2 concentrated on **version control concepts**, focusing on Git and GitHub a
 * Ability to design optimized, real-world solutions
 
 ---
+Here’s the **clean, concise GitHub README–ready format** for **Day 20 to Day 23**, exactly in the style you asked for 👇
+(Readable, professional, and recruiter-friendly)
+
+---
+
+## 🗓️ Day 20 | Sorting & Advanced Scenario Design
+
+**Date:** 09 January 2026
+
+### 🔹 Topics Covered
+
+* Sorting fundamentals and optimization concepts
+* Greedy algorithm logic
+* Scenario-based system design
+
+### 🛠️ Applications Implemented
+
+* **ATM Dispenser System**
+
+  * Optimal currency note distribution
+  * Dynamic denomination handling
+  * Fallback logic for unavailable exact change
+* **FitTrack – Fitness Tracker**
+
+  * Interface-based design (`ITrackable`)
+  * Inheritance & polymorphism with workout types
+
+### 🎯 Learning Outcome
+
+* Strong foundation in sorting logic
+* Improved real-world system modeling
+* Better understanding of interfaces and polymorphism
+
+---
+
+## 🗓️ Day 21 | Searching Algorithms & Performance-Oriented Design
+
+**Date:** 12 January 2026
+
+### 🔹 Topics Covered
+
+* Linear Search & Binary Search
+* Efficient I/O and string handling
+* Introduction to runtime & complexity analysis
+
+### 🛠️ Applications Implemented
+
+* **LoanBuddy – Loan Approval System**
+
+  * Encapsulation of approval logic
+  * Polymorphic EMI calculations
+  * Interface-driven design (`IApprovable`)
+* **Metal Factory Rod Cutting Problem**
+
+  * Revenue optimization scenarios
+* **Custom Furniture Manufacturing System**
+
+  * Waste-aware optimization strategies
+
+### 🎯 Learning Outcome
+
+* Clear understanding of search algorithms
+* Ability to analyze and optimize performance
+* Improved command over encapsulation and polymorphism
+
+---
+
+## 🗓️ Day 22 | Collections, String Manipulation & Runtime Analysis
+
+**Date:** 13 January 2026
+
+### 🔹 Topics Covered
+
+* Collections (`ArrayList`, `List`)
+* String parsing & formatting
+* Big-O notation and complexity analysis
+
+### 🛠️ Applications Implemented
+
+* **BookBuddy – Digital Bookshelf**
+
+  * Add, sort, and search books
+  * String-based data parsing
+* **CinemaTime – Movie Schedule Manager**
+
+  * Parallel list handling
+  * Keyword-based search
+
+### 🎯 Learning Outcome
+
+* Efficient use of collections
+* Improved string handling techniques
+* Strong introduction to runtime and space analysis
+
+---
+
+## 🗓️ Day 23 | Scenario-Based Address Book Application
+
+**Date:** 14 January 2026
+
+### 🔹 Topics Covered
+
+* Large-scale scenario-based development
+* Deep dive into OOP principles
+* Debugging and code improvement
+
+### 🛠️ Application Enhanced
+
+* **Address Book System**
+
+  * Multiple evolving use cases
+  * Improved design and logical flow
+  * Bug fixing using debugging tools
+
+### 🎯 Learning Outcome
+
+* Strong real-world OOP experience
+* Better debugging and code structuring skills
+* Confidence in extending existing codebases
+
+---
+Here is the **same content rewritten with different wording**, while **keeping the exact structure and format** intact 👇
+
+---
+
+🗓️ **Day-24 | C# Scenario-Based Questions**
+
+**Date:** 15 January 2026
+
+🔹 **Topics Covered**
+
+* Worked on a scenario-based **AddressBook** application
+* In-depth exploration of **OOP concepts** with mentor guidance
+* Extended the existing AddressBook codebase by **adding new use cases and methods** as required
+* Used **debugging tools** to identify and fix logical and runtime issues
+
+🔹 **Code Practice & GitHub Updates**
+
+* Uploaded *Core C# scenario-based implementations* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved understanding of **OOP and DSA concepts**
+* Learned how to approach and design **real-world problem scenarios**
+* Enhanced proficiency in **C# features and syntax**
+* Gained strong hands-on experience through continuous coding practice
+
+🚀 **Next Steps**
+
+* Keep practicing advanced **C# programming concepts**
+* Dive deeper into core and advanced **C# topics**
+* Explore **.NET libraries** and build real-world applications
+
+---
+
+🗓️ **Day-25 | C# Scenario-Based Questions**
+
+**Date:** 16 January 2026
+
+🔹 **Topics Covered**
+
+* Implemented scenario-based problems like **Traffic Manager** and **BookShelf**
+* Continued deep learning of **Object-Oriented Programming principles** with mentors
+* Enhanced the AddressBook project by **introducing additional features and logic**
+* Utilized **debuggers** to troubleshoot and resolve code issues effectively
+
+🔹 **Code Practice & GitHub Updates**
+
+* Pushed *DSA-based C# scenario projects* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened practical knowledge of **OOP and data structures**
+* Gained clarity on solving **real-life software problems**
+* Became more confident with **C# functionalities**
+* Improved problem-solving skills through hands-on coding
+
+🚀 **Next Steps**
+
+* Continue regular practice of **C# programming**
+* Explore deeper concepts within **C# and .NET**
+* Work on more **real-world oriented projects**
+
+---
+
+🗓️ **Day-26 | C# Scenario-Based Questions**
+
+**Date:** 17 January 2026
+
+🔹 **Topics Covered**
+
+* Developed scenario-based applications including **FlashDeals**, **FitnessTracker**, and **LinkedList implementation in AddressBook**
+* Deepened understanding of **OOP concepts** through mentor-led discussions
+* Expanded the AddressBook system by **adding new methods and improving existing logic**
+* Applied **debugging techniques** to efficiently solve bugs and optimize code
+
+🔹 **Code Practice & GitHub Updates**
+
+* Committed *DSA-focused C# scenario-based solutions* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Achieved better command over **OOP and DSA fundamentals**
+* Learned structured approaches to **real-world problem solving**
+* Enhanced practical knowledge of **C# programming**
+* Gained valuable hands-on experience through continuous development
+
+🚀 **Next Steps**
+
+* Practice more complex **C# programming scenarios**
+* Learn additional **C# and .NET concepts**
+* Build and explore **real-world software projects**
+
+---
