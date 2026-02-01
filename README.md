@@ -623,3 +623,200 @@ Here is the **same content rewritten with different wording**, while **keeping t
 * Build and explore **real-world software projects**
 
 ---
+
+🗓️ **Day-27 | C# Scenario-Based Questions and Introduction to Generics**
+**Date:** 19 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on scenario-based problems: *ParcelTracker* and *ExamProctor*
+* In-depth discussion on OOPS concepts with mentors
+* Introduction to **Generics** in C#
+* Enhanced the codebase by adding required methods
+* Used debugging tools to identify and fix issues
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened understanding of OOPS and DSA concepts
+* Learned how to approach real-world problem statements
+* Improved proficiency in C# functionalities
+* Gained hands-on coding experience
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore more C# features and libraries
+* Work on real-world project implementations
+
+---
+
+🗓️ **Day-28 | C# Scenario-Based Questions and Collections**
+**Date:** 20 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved scenario-based problems: *Sorting Aadhar Number* and *Password Cracker*
+* Deepened OOPS understanding with mentor guidance
+* Extended AddressBook use cases in the existing codebase
+* Learned and applied **Collections** concepts with additional methods
+* Debugged and resolved issues using debugging tools
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Enhanced knowledge of OOPS and DSA
+* Practiced real-world problem-solving approaches
+* Improved command over C# collections
+* Strengthened practical coding skills
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore additional C# libraries and use cases
+* Apply concepts in practical projects
+
+---
+
+🗓️ **Day-29 | C# Scenario-Based Questions and Streams**
+**Date:** 21 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on scenario problems: *EduResults* and *SmartCheckout*
+* Strengthened OOPS concepts with mentor discussions
+* Expanded AddressBook project with additional use cases
+* Learned and implemented **Stream** concepts
+* Used debugging techniques to fix code issues
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved understanding of OOPS and DSA applications
+* Learned practical use of Streams in C#
+* Enhanced problem-solving and debugging skills
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore more real-world implementations
+* Learn additional .NET libraries
+
+---
+
+🗓️ **Day-30 | C# Scenario-Based Questions and Exceptions**
+**Date:** 22 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved scenario-based problem: *AmbulanceRoute*
+* Deep dive into **Generics** with mentor support
+* Extended AddressBook project with new methods
+* Learned **Exception Handling** concepts
+* Debugged and resolved coding errors
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened OOPS and DSA fundamentals
+* Learned structured exception handling in real scenarios
+* Improved practical coding expertise
+
+🚀 **Next Steps**
+
+* Continue practicing advanced C# concepts
+* Explore real-world project use cases
+
+---
+
+🗓️ **Day-31 | C# Scenario-Based Questions and Concepts**
+**Date:** 23 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved problems: *HealthCheckPro* and *EventTracker*
+* Deep dive into **Regex** and **nuint** concepts with mentors
+* Added more functionality to the AddressBook codebase
+* Debugged and improved existing implementations
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved knowledge of OOPS and Collections
+* Learned advanced C# concepts like Regex
+* Enhanced real-world problem-solving ability
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore advanced C# libraries and applications
+
+---
+
+🗓️ **Day-32 | C# Scenario-Based Questions and MSTesting**
+**Date:** 27 Jan 2026
+
+🔹 **Topics Covered**
+
+* In-depth learning of **MSTest** framework with mentors
+* Extended AddressBook project with additional scenarios
+* Revisited Stream concepts during implementation
+* Debugged and optimized code
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Learned unit testing practices using MSTest
+* Strengthened OOPS and DSA application skills
+* Improved debugging and testing techniques
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Apply testing practices in real projects
+
+---
+
+🗓️ **Day-33 | C# Scenario-Based Questions and CSV Data Handling**
+**Date:** 28 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on problems: *AeroVigil* and *Bank Account Validation*
+* Deep dive into **Annotations** and **Reflection** with mentors
+* Extended AddressBook project with new functionalities
+* Applied **Stream** concepts for CSV handling
+* Debugged and refined code
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Gained experience in OOPS and DSA with real scenarios
+* Learned CSV data handling using Streams
+* Improved understanding of Reflection and Annotations
+
+🚀 **Next Steps**
+
+* Continue strengthening C# programming concepts
+* Explore advanced .NET libraries and real-world projects
