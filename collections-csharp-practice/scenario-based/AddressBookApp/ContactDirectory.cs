@@ -1,151 +1,198 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace AddressBookApp
 {
-    public class ContactDirectory
+    public class ContactDirectory : IContactRepository
     {
-        private List<ContactPerson> contacts = new List<ContactPerson>();
+        private readonly List<ContactPerson> contacts = new List<ContactPerson>();
+        private readonly object _lock = new object();
+        private readonly ThreadSafeLogger _logger = ThreadSafeLogger.Instance;
 
         public void InsertContact(ContactPerson person)
         {
-            try
+            lock (_lock)
             {
-                if(person == null)
-                    throw new ArgumentNullException(nameof(person));
-
-                if(contacts.Any(c => c.Equals(person)))
+                try
                 {
-                    Console.WriteLine("duplicate contact, cannot add");
-                    return;
-                }
+                    if (person == null)
+                        throw new ArgumentNullException(nameof(person), "Contact person cannot be null");
 
-                contacts.Add(person);
-                Console.WriteLine("contact added to address book");
-            }
-            catch(ArgumentNullException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
+                    if (contacts.Any(c => c.Equals(person)))
+                    {
+                        _logger.Log("Duplicate contact detected, cannot add");
+                        return;
+                    }
+
+                    contacts.Add(person);
+                    _logger.Log($"Contact added: {person.FirstName} {person.LastName}");
+                }
+                catch (ArgumentNullException ex)
+                {
+                    _logger.LogError("Failed to insert contact", ex);
+                    throw new ContactException("Failed to insert contact", ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error inserting contact", ex);
+                    throw new ContactException("Unexpected error while inserting contact", ex);
+                }
             }
         }
 
         public void SearchByCityOrState(string value)
         {
-            try
+            lock (_lock)
             {
-                if(string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("search value cannot be empty");
-
-                var searchResults = contacts.Where(c => c.City == value || c.State == value).ToList();
-
-                if(searchResults.Count == 0)
+                try
                 {
-                    Console.WriteLine("no person found in given city or state");
-                    return;
+                    if (string.IsNullOrWhiteSpace(value))
+                        throw new ArgumentException("Search value cannot be empty", nameof(value));
+
+                    var searchResults = contacts.Where(c => c.City == value || c.State == value).ToList();
+
+                    if (searchResults.Count == 0)
+                    {
+                        _logger.Log($"No persons found in city or state: {value}");
+                        return;
+                    }
+
+                    _logger.Log($"Found {searchResults.Count} person(s) in {value}");
+                    searchResults.ForEach(c =>
+                    {
+                        c.Display();
+                        Console.WriteLine("");
+                    });
                 }
-
-                searchResults.ForEach(c =>
+                catch (ArgumentException ex)
                 {
-                    c.Display();
-                    Console.WriteLine("");
-                });
-            }
-            catch(ArgumentException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
+                    _logger.LogError("Search validation failed", ex);
+                    throw new ContactException("Search operation failed", ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error during search", ex);
+                    throw new ContactException("Unexpected error during search", ex);
+                }
             }
         }
 
         public void ViewPersonsByCity(string city)
         {
-            try
+            lock (_lock)
             {
-                if(string.IsNullOrWhiteSpace(city))
-                    throw new ArgumentException("city cannot be empty");
-
-                var cityResults = contacts.Where(c => c.City == city).ToList();
-
-                if(cityResults.Count == 0)
+                try
                 {
-                    Console.WriteLine("no persons found in this city");
-                    return;
+                    if (string.IsNullOrWhiteSpace(city))
+                        throw new ArgumentException("City cannot be empty", nameof(city));
+
+                    var cityResults = contacts.Where(c => c.City == city).ToList();
+
+                    if (cityResults.Count == 0)
+                    {
+                        _logger.Log($"No persons found in city: {city}");
+                        return;
+                    }
+
+                    _logger.Log($"Displaying {cityResults.Count} person(s) from {city}");
+                    cityResults.ForEach(c =>
+                    {
+                        c.Display();
+                        Console.WriteLine("");
+                    });
                 }
-
-                cityResults.ForEach(c =>
+                catch (ArgumentException ex)
                 {
-                    c.Display();
-                    Console.WriteLine("");
-                });
-            }
-            catch(ArgumentException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
+                    _logger.LogError("View by city validation failed", ex);
+                    throw new ContactException("Failed to view persons by city", ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error viewing persons by city", ex);
+                    throw new ContactException("Unexpected error viewing persons by city", ex);
+                }
             }
         }
 
         public void ViewPersonsByState(string state)
         {
-            try
+            lock (_lock)
             {
-                if(string.IsNullOrWhiteSpace(state))
-                    throw new ArgumentException("state cannot be empty");
-
-                var stateResults = contacts.Where(c => c.State == state).ToList();
-
-                if(stateResults.Count == 0)
+                try
                 {
-                    Console.WriteLine("no persons found in this state");
-                    return;
+                    if (string.IsNullOrWhiteSpace(state))
+                        throw new ArgumentException("State cannot be empty", nameof(state));
+
+                    var stateResults = contacts.Where(c => c.State == state).ToList();
+
+                    if (stateResults.Count == 0)
+                    {
+                        _logger.Log($"No persons found in state: {state}");
+                        return;
+                    }
+
+                    _logger.Log($"Displaying {stateResults.Count} person(s) from {state}");
+                    stateResults.ForEach(c =>
+                    {
+                        c.Display();
+                        Console.WriteLine("");
+                    });
                 }
-
-                stateResults.ForEach(c =>
+                catch (ArgumentException ex)
                 {
-                    c.Display();
-                    Console.WriteLine("");
-                });
-            }
-            catch(ArgumentException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
+                    _logger.LogError("View by state validation failed", ex);
+                    throw new ContactException("Failed to view persons by state", ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error viewing persons by state", ex);
+                    throw new ContactException("Unexpected error viewing persons by state", ex);
+                }
             }
         }
 
         public void EditContact(string firstName, string lastName)
         {
-            try
+            lock (_lock)
             {
-                if(contacts.Count == 0)
+                try
                 {
-                    Console.WriteLine("no contacts available");
-                    return;
+                    if (contacts.Count == 0)
+                    {
+                        _logger.Log("No contacts available for editing");
+                        return;
+                    }
+
+                    var contact = contacts.FirstOrDefault(c => c.FirstName == firstName && c.LastName == lastName);
+
+                    if (contact == null)
+                    {
+                        _logger.Log($"Contact not found: {firstName} {lastName}");
+                        return;
+                    }
+
+                    Console.WriteLine("enter new address:");
+                    contact.Address = Console.ReadLine();
+                    Console.WriteLine("enter new city:");
+                    contact.City = Console.ReadLine();
+                    Console.WriteLine("enter new state:");
+                    contact.State = Console.ReadLine();
+                    Console.WriteLine("enter new zip:");
+                    contact.Zip = Console.ReadLine();
+                    Console.WriteLine("enter new phone number:");
+                    contact.Phone = Console.ReadLine();
+                    Console.WriteLine("enter new email:");
+                    contact.Email = Console.ReadLine();
+                    
+                    _logger.Log($"Contact updated: {firstName} {lastName}");
                 }
-
-                var contact = contacts.FirstOrDefault(c => c.FirstName == firstName && c.LastName == lastName);
-
-                if(contact == null)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("contact not found");
-                    return;
+                    _logger.LogError("Error updating contact", ex);
+                    throw new ContactException("Failed to update contact", ex);
                 }
-
-                Console.WriteLine("enter new address:");
-                contact.Address = Console.ReadLine();
-                Console.WriteLine("enter new city:");
-                contact.City = Console.ReadLine();
-                Console.WriteLine("enter new state:");
-                contact.State = Console.ReadLine();
-                Console.WriteLine("enter new zip:");
-                contact.Zip = Console.ReadLine();
-                Console.WriteLine("enter new phone number:");
-                contact.Phone = Console.ReadLine();
-                Console.WriteLine("enter new email:");
-                contact.Email = Console.ReadLine();
-                Console.WriteLine("contact updated successfully");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error updating contact: {ex.Message}");
             }
         }
 
@@ -183,28 +230,32 @@ namespace AddressBookApp
 
         public void DeleteContact(string firstName, string lastName)
         {
-            try
+            lock (_lock)
             {
-                if(contacts.Count == 0)
+                try
                 {
-                    Console.WriteLine("no contacts available");
-                    return;
+                    if (contacts.Count == 0)
+                    {
+                        _logger.Log("No contacts available for deletion");
+                        return;
+                    }
+
+                    var contact = contacts.FirstOrDefault(c => c.FirstName == firstName && c.LastName == lastName);
+
+                    if (contact == null)
+                    {
+                        _logger.Log($"Contact not found for deletion: {firstName} {lastName}");
+                        return;
+                    }
+
+                    contacts.Remove(contact);
+                    _logger.Log($"Contact deleted: {firstName} {lastName}");
                 }
-
-                var contact = contacts.FirstOrDefault(c => c.FirstName == firstName && c.LastName == lastName);
-
-                if(contact == null)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("contact not found");
-                    return;
+                    _logger.LogError("Error deleting contact", ex);
+                    throw new ContactException("Failed to delete contact", ex);
                 }
-
-                contacts.Remove(contact);
-                Console.WriteLine("contact deleted successfully");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error deleting contact: {ex.Message}");
             }
         }
 
@@ -225,57 +276,77 @@ namespace AddressBookApp
 
         public void SortByFirstName()
         {
-            try
+            lock (_lock)
             {
-                var sorted = contacts.OrderBy(c => c.FirstName).ToList();
-                contacts.Clear();
-                contacts.AddRange(sorted);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error sorting by first name: {ex.Message}");
+                try
+                {
+                    var sorted = contacts.OrderBy(c => c.FirstName).ToList();
+                    contacts.Clear();
+                    contacts.AddRange(sorted);
+                    _logger.Log("Contacts sorted by first name");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Error sorting by first name", ex);
+                    throw new ContactException("Failed to sort by first name", ex);
+                }
             }
         }
 
         public void SortByCity()
         {
-            try
+            lock (_lock)
             {
-                var sorted = contacts.OrderBy(c => c.City).ToList();
-                contacts.Clear();
-                contacts.AddRange(sorted);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error sorting by city: {ex.Message}");
+                try
+                {
+                    var sorted = contacts.OrderBy(c => c.City).ToList();
+                    contacts.Clear();
+                    contacts.AddRange(sorted);
+                    _logger.Log("Contacts sorted by city");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Error sorting by city", ex);
+                    throw new ContactException("Failed to sort by city", ex);
+                }
             }
         }
 
         public void SortByState()
         {
-            try
+            lock (_lock)
             {
-                var sorted = contacts.OrderBy(c => c.State).ToList();
-                contacts.Clear();
-                contacts.AddRange(sorted);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error sorting by state: {ex.Message}");
+                try
+                {
+                    var sorted = contacts.OrderBy(c => c.State).ToList();
+                    contacts.Clear();
+                    contacts.AddRange(sorted);
+                    _logger.Log("Contacts sorted by state");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Error sorting by state", ex);
+                    throw new ContactException("Failed to sort by state", ex);
+                }
             }
         }
 
         public void SortByZip()
         {
-            try
+            lock (_lock)
             {
-                var sorted = contacts.OrderBy(c => c.Zip).ToList();
-                contacts.Clear();
-                contacts.AddRange(sorted);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error sorting by zip: {ex.Message}");
+                try
+                {
+                    var sorted = contacts.OrderBy(c => c.Zip).ToList();
+                    contacts.Clear();
+                    contacts.AddRange(sorted);
+                    _logger.Log("Contacts sorted by zip");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Error sorting by zip", ex);
+                    throw new ContactException("Failed to sort by zip", ex);
+                }
             }
         }
 

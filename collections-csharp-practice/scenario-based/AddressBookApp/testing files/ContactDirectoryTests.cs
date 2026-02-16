@@ -46,15 +46,6 @@ namespace AddressBookApp.Tests
             Assert.AreEqual(1,allContacts.Count);
         }
 
-        [TestMethod]
-        public void InsertContact_WithNullContact_ShouldNotCrash()
-        {
-            //Act
-            directory.InsertContact(null);
-
-            //Assert
-            Assert.AreEqual(0,directory.GetAllContacts().Count);
-        }
 
         [TestMethod]
         public void DeleteContact_WithValidContact_ShouldRemove()

@@ -10,14 +10,14 @@ namespace AddressBookApp.Tests
         public void CreateContactPerson_WithValidData_ShouldCreateSuccessfully()
         {
             //Arrange
-            string firstName = "John";
-            string lastName = "Doe";
-            string address = "123 Main St";
-            string city = "New York";
-            string state = "NY";
-            string zip = "10001";
-            string phone = "555-1234";
-            string email = "john@example.com";
+            string firstName = "Rahul";
+            string lastName = "Sharma";
+            string address = "45 MG Road";
+            string city = "Mumbai";
+            string state = "Maharashtra";
+            string zip = "400001";
+            string phone = "9876543210";
+            string email = "rahul@example.in";
 
             //Act
             ContactPerson contact = new ContactPerson(firstName, lastName, address, city, state, zip, phone, email);
@@ -34,7 +34,7 @@ namespace AddressBookApp.Tests
         public void CreateContactPerson_WithEmptyFirstName_ShouldThrowException()
         {
             //Arrange & Act
-            ContactPerson contact = new ContactPerson("", "Doe", "123 St", "City", "State", "12345", "555-1234", "test@test.com");
+            ContactPerson contact = new ContactPerson("", "Sharma", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
         }
 
         [TestMethod]
@@ -42,15 +42,15 @@ namespace AddressBookApp.Tests
         public void CreateContactPerson_WithEmptyLastName_ShouldThrowException()
         {
             //Arrange & Act
-            ContactPerson contact = new ContactPerson("John", "", "123 St", "City", "State", "12345", "555-1234", "test@test.com");
+            ContactPerson contact = new ContactPerson("Rahul", "", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
         }
 
         [TestMethod]
         public void Equals_WithSameFirstAndLastName_ShouldReturnTrue()
         {
             //Arrange
-            ContactPerson contact1 = new ContactPerson("John", "Doe", "123 St", "City", "State", "12345", "555-1234", "test@test.com");
-            ContactPerson contact2 = new ContactPerson("John", "Doe", "456 Ave", "AnotherCity", "AnotherState", "54321", "555-5678", "another@test.com");
+            ContactPerson contact1 = new ContactPerson("Rahul", "Sharma", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
+            ContactPerson contact2 = new ContactPerson("Rahul", "Sharma", "88 Brigade Road", "Bengaluru", "Karnataka", "560001", "9123456780", "another@test.in");
 
             //Act & Assert
             Assert.IsTrue(contact1.Equals(contact2));
@@ -60,8 +60,8 @@ namespace AddressBookApp.Tests
         public void Equals_WithDifferentNames_ShouldReturnFalse()
         {
             //Arrange
-            ContactPerson contact1 = new ContactPerson("John", "Doe", "123 St", "City", "State", "12345", "555-1234", "test@test.com");
-            ContactPerson contact2 = new ContactPerson("Jane", "Doe", "456 Ave", "City", "State", "12345", "555-1234", "test@test.com");
+            ContactPerson contact1 = new ContactPerson("Rahul", "Sharma", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
+            ContactPerson contact2 = new ContactPerson("Anjali", "Sharma", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
 
             //Act & Assert
             Assert.IsFalse(contact1.Equals(contact2));
@@ -71,8 +71,8 @@ namespace AddressBookApp.Tests
         public void GetHashCode_WithSamePerson_ShouldBeEqual()
         {
             //Arrange
-            ContactPerson contact1 = new ContactPerson("John", "Doe", "123 St", "City", "State", "12345", "555-1234", "test@test.com");
-            ContactPerson contact2 = new ContactPerson("John", "Doe", "456 Ave", "City", "State", "12345", "555-1234", "test@test.com");
+            ContactPerson contact1 = new ContactPerson("Rahul", "Sharma", "12 Park Street", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
+            ContactPerson contact2 = new ContactPerson("Rahul", "Sharma", "88 Brigade Road", "Delhi", "Delhi", "110001", "9876543210", "test@test.in");
 
             //Act & Assert
             Assert.AreEqual(contact1.GetHashCode(), contact2.GetHashCode());

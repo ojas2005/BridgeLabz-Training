@@ -1,103 +1,130 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace AddressBookApp
 {
-    public class ContactService
+    public class ContactService : IAddressBookService
     {
-        private HashMap addressBooks = new HashMap();
+        private readonly HashMap addressBooks = new HashMap();
+        private readonly ThreadSafeLogger _logger = ThreadSafeLogger.Instance;
+        private readonly object _lock = new object();
 
         public void CreateAddressBook()
         {
-            try
+            lock (_lock)
             {
-                Console.WriteLine("enter new address book name:");
-                string name = Console.ReadLine();
-
-                if(string.IsNullOrWhiteSpace(name))
-                    throw new ArgumentException("address book name cannot be empty");
-
-                if(addressBooks.ContainsKey(name))
+                try
                 {
-                    Console.WriteLine("address book with this name already exists");
-                    return;
-                }
+                    Console.WriteLine("enter new address book name:");
+                    string name = Console.ReadLine();
 
-                addressBooks.Put(name, new ContactDirectory());
-                Console.WriteLine("address book created successfully");
-            }
-            catch(ArgumentException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error creating address book: {ex.Message}");
+                    if (string.IsNullOrWhiteSpace(name))
+                        throw new ArgumentException("Address book name cannot be empty", nameof(name));
+
+                    if (addressBooks.ContainsKey(name))
+                    {
+                        _logger.Log($"Address book with name '{name}' already exists");
+                        return;
+                    }
+
+                    addressBooks.Put(name, new ContactDirectory());
+                    _logger.Log($"Address book created successfully: {name}");
+                }
+                catch (ArgumentException ex)
+                {
+                    _logger.LogError("Failed to create address book", ex);
+                    throw new AddressBookException("Failed to create address book", ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error creating address book", ex);
+                    throw new AddressBookException("Unexpected error creating address book", ex);
+                }
             }
         }
 
         public void SearchPersonByCityOrState()
         {
-            try
+            lock (_lock)
             {
-                if(addressBooks.Size == 0)
+                try
                 {
-                    Console.WriteLine("no address books available");
-                    return;
-                }
+                    if (addressBooks.Size == 0)
+                    {
+                        _logger.Log("No address books available for search");
+                        return;
+                    }
 
-                Console.WriteLine("enter city or state:");
-                string value = Console.ReadLine();
+                    Console.WriteLine("enter city or state:");
+                    string value = Console.ReadLine();
 
-                if(string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("search value cannot be empty");
+                    if (string.IsNullOrWhiteSpace(value))
+                        throw new ArgumentException("Search value cannot be empty", nameof(value));
 
-                string[] keys = addressBooks.GetAllKeys();
-                ContactDirectory[] values = addressBooks.GetAllValues();
+                    string[] keys = addressBooks.GetAllKeys();
+                    ContactDirectory[] values = addressBooks.GetAllValues();
 
-                foreach (var x in keys.AsEnumerable()
-                    .Zip(values.AsEnumerable(), (k, v) => new { Key = k, Value = v })
-                    .Where(x => x.Value != null))
+                    foreach (var x in keys.AsEnumerable()
+                        .Zip(values.AsEnumerable(), (k, v) => new { Key = k, Value = v })
+                        .Where(x => x.Value != null))
                     {
                         Console.WriteLine($"address book: {x.Key}");
                         x.Value.SearchByCityOrState(value);
                     }
 
-            }
-            catch(ArgumentException ex)
-            {
-                Console.WriteLine($"error: {ex.Message}");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error searching: {ex.Message}");
+                    _logger.Log($"Search completed for: {value}");
+                }
+                catch (ArgumentException ex)
+                {
+                    _logger.LogError("Search validation failed", ex);
+                    throw new ContactException("Search operation failed", ex);
+                }
+                catch (ContactException)
+                {
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Unexpected error during search", ex);
+                    throw new ContactException("Unexpected error during search", ex);
+                }
             }
         }
 
         public void UseAddressBook()
         {
-            try
+            lock (_lock)
             {
-                if(addressBooks.Size == 0)
+                try
                 {
-                    Console.WriteLine("no address books available");
-                    return;
+                    if (addressBooks.Size == 0)
+                    {
+                        _logger.Log("No address books available");
+                        return;
+                    }
+
+                    Console.WriteLine("enter address book name to open:");
+                    string name = Console.ReadLine();
+
+                    ContactDirectory current = addressBooks.Get(name);
+
+                    if (current != null)
+                    {
+                        _logger.Log($"Opening address book: {name}");
+                        ContactServiceDirectoryMenu(current);
+                    }
+                    else
+                    {
+                        _logger.Log($"Address book not found: {name}");
+                    }
                 }
-
-                Console.WriteLine("enter address book name to open:");
-                string name = Console.ReadLine();
-
-                ContactDirectory current = addressBooks.Get(name);
-
-                if(current != null)
-                    ContactServiceDirectoryMenu(current);
-                else
-                    Console.WriteLine("address book not found");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"error opening address book: {ex.Message}");
+                catch (Exception ex)
+                {
+                    _logger.LogError("Error opening address book", ex);
+                    throw new AddressBookException("Failed to open address book", ex);
+                }
             }
         }
 
