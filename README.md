@@ -409,10 +409,6 @@ Day 2 concentrated on **version control concepts**, focusing on Git and GitHub a
 * Ability to design optimized, real-world solutions
 
 
-Here’s the **clean, concise GitHub README–ready format** for **Day 20 to Day 23**, exactly in the style you asked for 👇
-(Readable, professional, and recruiter-friendly)
-
-
 
 ## 🗓️ Day 20 | Sorting & Advanced Scenario Design
 
@@ -528,9 +524,6 @@ Here’s the **clean, concise GitHub README–ready format** for **Day 20 to Day
 * Strong real-world OOP experience
 * Better debugging and code structuring skills
 * Confidence in extending existing codebases
-
-
-Here is the **same content rewritten with different wording**, while **keeping the exact structure and format** intact 👇
 
 
 
