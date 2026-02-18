@@ -1,6 +1,3 @@
-//// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
 using HealthClinic.Menu;
 using HealthClinic.UserSecurity;
 using HealthClinic.Utility;
