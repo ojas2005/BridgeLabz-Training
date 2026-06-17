@@ -1,0 +1,35 @@
+[
+  {
+    "match_id": 101,
+    "home_team": "Mumbai Indians",
+    "away_team": "Chennai Super Kings",
+    "final_scores": {
+      "Mumbai Indians": 178,
+      "Chennai Super Kings": 182
+    },
+    "winning_team": "Chennai Super Kings",
+    "star_player": "MS Dhoni"
+  },
+  {
+    "match_id": 102,
+    "home_team": "Royal Challengers Bangalore",
+    "away_team": "Delhi Capitals",
+    "final_scores": {
+      "Royal Challengers Bangalore": 200,
+      "Delhi Capitals": 190
+    },
+    "winning_team": "Royal Challengers Bangalore",
+    "star_player": "Virat Kohli"
+  },
+  {
+    "match_id": 103,
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Rajasthan Royals",
+    "final_scores": {
+      "Kolkata Knight Riders": 165,
+      "Rajasthan Royals": 168
+    },
+    "winning_team": "Rajasthan Royals",
+    "star_player": "Sanju Samson"
+  }
+]
