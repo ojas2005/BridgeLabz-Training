@@ -1,197 +1,1294 @@
-***BridgeLabz Training**8
+# 📘 BridgeLabz Training Journal
 
-### 18 December – Introduction to C# Programming
-On this day, I began my journey with **C# basics**. I focused on understanding the fundamental syntax, structure, and logic of the language.
-To reinforce these concepts, I solved around **10–12 basic problems**, which helped me become comfortable with writing simple C# programs.
+**Program:** BridgeLabz
+**Technology Stack:** C#, .NET
+**Mode:** Training
 
-I also practiced organizing my code by uploading solutions to:
-* `gcr-codebase` directory
-* `leet-code-codebase` directory
 
-This step helped me develop good habits such as maintaining code repositories and tracking progress through version control.
 
-**Outcome:**
+## 🗓️ Day 1 | Program Orientation & Introduction
 
-* Built confidence in basic C# syntax
-* Understood how to structure and store solutions efficiently
+**Date:** 16 December 2025
 
-### 19 December – CLR, MSIL, and Programming Elements
+### 🔹 Session Summary
 
-I studied the **Common Language Runtime (CLR)** and **MSIL architecture**, which gave me a deeper understanding of how C# code is executed internally.
-I learned how source code is compiled into Intermediate Language and then executed by the CLR.
+Day 1 served as an **orientation session**, providing an overview of the BridgeLabz training program and setting expectations for the upcoming learning journey.
 
-Additionally, I covered:
+### 🔹 Key Activities
 
-* Data types
-* Operators
+* Introduction to the **BridgeLabz training framework**
+* Walkthrough of the **learning roadmap and objectives**
+* Discussion on:
 
-I implemented these concepts through code in the **programming-elements** directory and solved **Level 1 problems** inside the `c#-programming-elements` directory.
+  * Training structure
+  * Daily learning routines
+  * Coding standards and discipline
+* Explanation of:
 
-These problems helped me understand how data is stored, manipulated, and processed during program execution.
+  * Evaluation methodology
+  * Assessment criteria
+  * Industry relevance of the program
 
-**Outcome:**
+### 🔹 Key Takeaways
 
-* Clear understanding of C# execution flow
-* Strong grasp of data types and operators
+* Clear understanding of the **training roadmap**
+* Awareness of expected outcomes and deliverables
+* Prepared mindset for technical skill development
 
 
-### 20 December – Level 2 Programming Elements and Control Structures
 
-I solved **Level 2 problems**, which were more challenging and required taking user input and performing logical operations.
+## 🗓️ Day 2 | Git & GitHub Basics
 
-While solving these problems, I learned new and important concepts such as:
+**Date:** 17 December 2025
 
-* Conditional statements
-* Looping constructs
+### 🔹 Session Summary
 
-These concepts allowed me to control program flow and execute repeated logic efficiently.
+Day 2 concentrated on **version control concepts**, focusing on Git and GitHub and their importance throughout the training.
 
-**Outcome:**
+### 🔹 Topics Discussed
 
-* Improved logical thinking
-* Ability to write interactive programs using user input
-* Readiness to handle more complex problem statements
+* Fundamentals of **Git** and **GitHub**
+* Importance of version control in modern development
+* Repository organization and best practices
+* Common Git commands
+* Maintaining **regular daily commits**
 
+### 🔹 Workflow Guidelines
 
-### 22 December – Control Flow Concepts
+* Structuring repositories for daily tasks
+* Writing meaningful commit messages
+* Managing code changes effectively during training
 
-I studied control flow concepts in detail and solved **Level 1 problems** related to:
+### 🔹 Key Takeaways
 
-* If-else statements
-* Basic loop usage
+* Strong foundational understanding of **Git & GitHub**
+* Ability to manage repositories independently
+* Readiness to maintain organized and consistent code submissions
 
-These problems tested decision-making logic in programs.
-I also solved some **Level 2 control flow problems**, which involved nested conditions and more complex loops.
 
-**Outcome:**
 
-* Strong control over decision-making logic
-* Better understanding of loops in real scenarios
+## 🗓️ Day 3 | C# & .NET Fundamentals
 
+**Date:** 18 December 2025
 
-### 23 December – Advanced Loops and Introduction to Arrays
+### ✅ Tasks Completed
 
-I completed **Level 2 problems** and moved on to **Level 3 problems**, which were more advanced and tested my deep understanding of:
+#### 🔹 Code Practice & GitHub Submission
 
-* While loops
-* For loops
+* Practiced fundamental **C# programming problems**
+* Uploaded core practice programs to GitHub
 
-After solving these problems, I pushed the code to GitHub, improving my experience with version control.
+#### 🔹 Theory Concepts Covered
 
-Later, I studied **arrays**, including:
+* Evolution and history of **C# and .NET**
+* Differences between **low-level and high-level languages**
+* Compiler vs interpreter concepts
+* Core **C# syntax and fundamentals**
+* Execution flow of a **.NET application**
+* Overview of **.NET architecture**
+* Understanding **IL (Intermediate Language)** and **CLR**
+* Usage and purpose of the **static keyword**
 
-* Array initialization
-* Taking array input from users
-* Accessing and modifying elements
+### 🎯 Learning Outcome
 
-I solved **Level 1 array problems**, where I applied control flow logic using arrays.
+* Built a strong base in **C# and .NET**
+* Understood internal execution of .NET applications
+* Improved programming fundamentals through practice
+* Successfully maintained GitHub submissions
 
-**Outcome:**
 
-* Mastery of loops
-* Clear understanding of single-dimensional arrays
-* Experience combining arrays with conditional logic
 
+## 🗓️ Day 4 | C# Basics & Runtime Concepts
 
-### 24 December – Multidimensional Arrays and Methods
+**Date:** 19 December 2025
 
-I learned about **multidimensional arrays** and how to use loops to traverse them effectively.
-I then solved **Level 2 array problems**, which required advanced logic and efficient loop usage.
+### 🔹 Topics Covered
 
-After that, I studied the theory of **methods** and attempted **Level 1 problems**, focusing on:
+* C# operators and their usage
+* C# data types
+* Revision of MSIL and CLR concepts
+* Understanding runtime execution flow
 
-* Code reusability
-* Breaking problems into smaller logical units
+### 🎯 Learning Outcome
 
-**Outcome:**
+* Improved understanding of operators and data types
+* Clear revision of CLR and MSIL
+* Better insight into C# runtime behavior
 
-* Ability to solve complex array-based problems
-* Understanding of modular programming using methods
 
 
-### 25 December – Methods in Depth
+## 🗓️ Day 5 | C# Operators & Access Modifiers
 
-I solved **Level 1, Level 2, and Level 3 problems** related to methods.
-Many of these problems reused earlier logic, but this time the logic was implemented inside methods.
+**Date:** 20 December 2025
 
-This reinforced the importance of:
+### 🔹 Topics Covered
 
-* Clean code
-* Reusability
-* Better program structure
+* Problem-solving using C# operators
+* Access modifiers:
 
-**Outcome:**
+  * public
+  * private
+  * protected
+  * internal
+  * protected internal
+  * private protected
 
-* Strong command over methods
-* Improved program readability and structure
+### 🎯 Learning Outcome
 
+* Strengthened logical thinking using operators
+* Clear understanding of access control in C#
+* Improved ability to write secure and maintainable code
 
-### 26 December – Strings and Mini Project
 
-I studied **string concepts**, cleared doubts, and applied them to solve **Level 1 string problems**.
-This helped me understand:
 
-* String manipulation
-* String comparisons
-* Built-in string methods
+## 🗓️ Day 6 | C# Control Flow Statements
 
-After that, I solved the **Snake and Ladder problem**, where I developed a **2–4 player game** with additional twists.
-This problem helped me combine multiple concepts such as loops, conditions, arrays, strings, and logic building.
+**Date:** 22 December 2025
 
-**Outcome:**
+### 🔹 Topics Covered
 
-* Practical understanding of strings
-* Experience building a mini-project using core C# concepts
+* Conditional statements: if, else if, else, switch
+* Looping constructs: for, while, do while, foreach
+* Loop control keywords: break, continue
+* Nested loops
 
+### 🎯 Learning Outcome
 
-### 27–28 December – Weekend Break
+* Hands-on experience with control flow
+* Improved logical reasoning
+* Better confidence in writing structured programs
 
-These days were kept as rest days, allowing me to revise concepts mentally and prepare for upcoming advanced problems.
 
 
-### 29 December – Scenario-Based Problem Solving
+## 🗓️ Day 7 | Control Flow & Arrays
 
-I worked on **two scenario-based problem sets**:
+**Date:** 23 December 2025
 
-1. String-based problems:
+### 🔹 Topics Covered
 
-   * String Formatter
-   * String Analyzer
+* Revision of control flow concepts
+* One-dimensional and two-dimensional arrays
+* Different array creation techniques
+* Use of `Environment.Exit(0)`
 
-2. Array-based problems:
+### 🎯 Learning Outcome
 
-   * Grades problem
-   * Temperature problem
+* Improved understanding of arrays
+* Enhanced problem-solving using loops and arrays
 
-While solving these, I learned practical **use cases of built-in string functions**, which improved my efficiency and code quality.
 
-**Outcome:**
 
-* Real-world application of strings and arrays
-* Exposure to scenario-based problem-solving
+## 🗓️ Day 8 | Arrays & Methods
 
+**Date:** 24 December 2025
 
-### 30 December – Advanced Scenario-Based Applications
+### 🔹 Topics Covered
 
-I solved **two advanced scenario-based problems**:
+* Advanced array usage
+* Method creation:
 
-1. **Role-Based Accessible Library Management System**
+  * Static methods
+  * Non-static methods
+* Object creation for method calls
+* Recursion concepts
 
-   * Search books
-   * Rent books
-   * Store books
-   * Implemented role-based access control
+### 🎯 Learning Outcome
 
-2. **Student Evaluation System**
+* Stronger understanding of methods
+* Improved coding structure and logic
+* Hands-on experience with recursion
 
-   * Compared student answers with actual answers
-   * Generated results such as pass or fail
 
-These problems helped me understand how programming concepts are used in real systems and applications.
 
-**Outcome:**
+## 🗓️ Day 9 | Strings & Built-in Functions
 
-* Experience designing real-world systems
-* Improved problem-solving and logical structuring skills
+**Date:** 26 December 2025
+
+### 🔹 Topics Covered
+
+* String creation and manipulation
+* String methods such as substring and character access
+* Built-in functions:
+
+  * Random
+  * Math
+  * DateTime
+
+### 🎯 Learning Outcome
+
+* Improved proficiency in string handling
+* Practical experience with built-in .NET functions
+
+
+
+## 🗓️ Day 10 | Scenario-Based Programming
+
+**Date:** 29 December 2025
+
+### 🔹 Topics Covered
+
+* Scenario-based problems using strings
+* Arrays and methods-based questions
+* Debugging techniques
+
+### 🎯 Learning Outcome
+
+* Enhanced real-world problem-solving skills
+* Better debugging and analytical thinking
+
+
+
+## 🗓️ Day 11 | Constructors & Scenario-Based Design
+
+**Date:** 30 December 2025
+
+### 🔹 Topics Covered
+
+* Constructor usage
+* `this` keyword
+* Access modifier best practices
+* Scenario-based applications
+
+### 🎯 Learning Outcome
+
+* Improved understanding of constructors
+* Better approach to structured application design
+
+
+
+## 🗓️ Day 12 | OOP Keywords & Scenario-Based Applications
+
+**Date:** 31 December 2025
+
+### 🔹 Topics Covered
+
+* Static, sealed, and `is` keyword
+* OOP-based scenario problems
+* Debugging techniques
+
+### 🎯 Learning Outcome
+
+* Clear understanding of OOP keywords
+* Improved real-world coding approach
+
+
+
+## 🗓️ Day 13 | Object Modeling & Design
+
+**Date:** 01 January 2026
+
+### 🔹 Topics Covered
+
+* Object modeling concepts
+* Object and class diagrams
+* Scenario-based object design
+
+### 🎯 Learning Outcome
+
+* Ability to design object models
+* Better understanding of UML-style thinking
+
+
+
+## 🗓️ Day 14 | Inheritance & Polymorphism
+
+**Date:** 02 January 2026
+
+### 🔹 Topics Covered
+
+* Types of inheritance
+* Method overriding
+* Constructor chaining
+* Polymorphism concepts
+
+### 🎯 Learning Outcome
+
+* Strong grasp of inheritance
+* Improved ability to design reusable code
+
+
+
+## 🗓️ Day 15 | Advanced OOP Scenarios
+
+**Date:** 03 January 2026
+
+### 🔹 Topics Covered
+
+* Real-world OOP problem solving
+* Diamond problem
+* Debugging complex logic
+
+### 🎯 Learning Outcome
+
+* Deepened understanding of OOP principles
+* Improved analytical and debugging skills
+
+
+
+## 🗓️ Day 16 | Encapsulation, Abstraction & Interfaces
+
+**Date:** 05 January 2026
+
+### 🔹 Topics Covered
+
+* Encapsulation
+* Abstraction
+* Interfaces
+* Polymorphism
+
+### 🎯 Learning Outcome
+
+* Ability to design scalable OOP systems
+* Strong understanding of abstraction techniques
+
+
+
+## 🗓️ Day 17 | OOP with Arrays
+
+**Date:** 06 January 2026
+
+### 🔹 Topics Covered
+
+* Arrays with OOP
+* Interface-based polymorphism
+* Scenario-based applications
+
+### 🎯 Learning Outcome
+
+* Improved integration of arrays with OOP
+* Enhanced real-world design thinking
+
+
+
+## 🗓️ Day 18 | Linked List & Employee Wage System
+
+**Date:** 07 January 2026
+
+### 🔹 Topics Covered
+
+* Linked List from Collection framework
+* Employee wage computation problem
+
+### 🎯 Learning Outcome
+
+* Strong understanding of LinkedList
+* Improved experience with real-world problem modeling
+
+
+
+## 🗓️ Day 19 | Stack, Queue & Dictionary
+
+**Date:** 08 January 2026
+
+### 🔹 Topics Covered
+
+* Stack (LIFO)
+* Queue (FIFO)
+* Dictionary and hashing concepts
+
+### 🎯 Learning Outcome
+
+* Practical understanding of core data structures
+* Confidence in using collections
+
+
+
+## 🗓️ Day 20 | Sorting & Advanced Scenario Design
+
+**Date:** 09 January 2026
+
+### 🔹 Topics Covered
+
+* Sorting concepts
+* ATM dispenser logic
+* Interface-based application design
+
+### 🎯 Learning Outcome
+
+* Understanding of sorting fundamentals
+* Ability to design optimized, real-world solutions
+
+
+
+## 🗓️ Day 20 | Sorting & Advanced Scenario Design
+
+**Date:** 09 January 2026
+
+### 🔹 Topics Covered
+
+* Sorting fundamentals and optimization concepts
+* Greedy algorithm logic
+* Scenario-based system design
+
+### 🛠️ Applications Implemented
+
+* **ATM Dispenser System**
+
+  * Optimal currency note distribution
+  * Dynamic denomination handling
+  * Fallback logic for unavailable exact change
+* **FitTrack – Fitness Tracker**
+
+  * Interface-based design (`ITrackable`)
+  * Inheritance & polymorphism with workout types
+
+### 🎯 Learning Outcome
+
+* Strong foundation in sorting logic
+* Improved real-world system modeling
+* Better understanding of interfaces and polymorphism
+
+
+
+## 🗓️ Day 21 | Searching Algorithms & Performance-Oriented Design
+
+**Date:** 12 January 2026
+
+### 🔹 Topics Covered
+
+* Linear Search & Binary Search
+* Efficient I/O and string handling
+* Introduction to runtime & complexity analysis
+
+### 🛠️ Applications Implemented
+
+* **LoanBuddy – Loan Approval System**
+
+  * Encapsulation of approval logic
+  * Polymorphic EMI calculations
+  * Interface-driven design (`IApprovable`)
+* **Metal Factory Rod Cutting Problem**
+
+  * Revenue optimization scenarios
+* **Custom Furniture Manufacturing System**
+
+  * Waste-aware optimization strategies
+
+### 🎯 Learning Outcome
+
+* Clear understanding of search algorithms
+* Ability to analyze and optimize performance
+* Improved command over encapsulation and polymorphism
+
+
+
+## 🗓️ Day 22 | Collections, String Manipulation & Runtime Analysis
+
+**Date:** 13 January 2026
+
+### 🔹 Topics Covered
+
+* Collections (`ArrayList`, `List`)
+* String parsing & formatting
+* Big-O notation and complexity analysis
+
+### 🛠️ Applications Implemented
+
+* **BookBuddy – Digital Bookshelf**
+
+  * Add, sort, and search books
+  * String-based data parsing
+* **CinemaTime – Movie Schedule Manager**
+
+  * Parallel list handling
+  * Keyword-based search
+
+### 🎯 Learning Outcome
+
+* Efficient use of collections
+* Improved string handling techniques
+* Strong introduction to runtime and space analysis
+
+
+
+## 🗓️ Day 23 | Scenario-Based Address Book Application
+
+**Date:** 14 January 2026
+
+### 🔹 Topics Covered
+
+* Large-scale scenario-based development
+* Deep dive into OOP principles
+* Debugging and code improvement
+
+### 🛠️ Application Enhanced
+
+* **Address Book System**
+
+  * Multiple evolving use cases
+  * Improved design and logical flow
+  * Bug fixing using debugging tools
+
+### 🎯 Learning Outcome
+
+* Strong real-world OOP experience
+* Better debugging and code structuring skills
+* Confidence in extending existing codebases
+
+
+
+🗓️ **Day-24 | C# Scenario-Based Questions**
+
+**Date:** 15 January 2026
+
+🔹 **Topics Covered**
+
+* Worked on a scenario-based **AddressBook** application
+* In-depth exploration of **OOP concepts** with mentor guidance
+* Extended the existing AddressBook codebase by **adding new use cases and methods** as required
+* Used **debugging tools** to identify and fix logical and runtime issues
+
+🔹 **Code Practice & GitHub Updates**
+
+* Uploaded *Core C# scenario-based implementations* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved understanding of **OOP and DSA concepts**
+* Learned how to approach and design **real-world problem scenarios**
+* Enhanced proficiency in **C# features and syntax**
+* Gained strong hands-on experience through continuous coding practice
+
+🚀 **Next Steps**
+
+* Keep practicing advanced **C# programming concepts**
+* Dive deeper into core and advanced **C# topics**
+* Explore **.NET libraries** and build real-world applications
+
+
+
+🗓️ **Day-25 | C# Scenario-Based Questions**
+
+**Date:** 16 January 2026
+
+🔹 **Topics Covered**
+
+* Implemented scenario-based problems like **Traffic Manager** and **BookShelf**
+* Continued deep learning of **Object-Oriented Programming principles** with mentors
+* Enhanced the AddressBook project by **introducing additional features and logic**
+* Utilized **debuggers** to troubleshoot and resolve code issues effectively
+
+🔹 **Code Practice & GitHub Updates**
+
+* Pushed *DSA-based C# scenario projects* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened practical knowledge of **OOP and data structures**
+* Gained clarity on solving **real-life software problems**
+* Became more confident with **C# functionalities**
+* Improved problem-solving skills through hands-on coding
+
+🚀 **Next Steps**
+
+* Continue regular practice of **C# programming**
+* Explore deeper concepts within **C# and .NET**
+* Work on more **real-world oriented projects**
+
+
+
+🗓️ **Day-26 | C# Scenario-Based Questions**
+
+**Date:** 17 January 2026
+
+🔹 **Topics Covered**
+
+* Developed scenario-based applications including **FlashDeals**, **FitnessTracker**, and **LinkedList implementation in AddressBook**
+* Deepened understanding of **OOP concepts** through mentor-led discussions
+* Expanded the AddressBook system by **adding new methods and improving existing logic**
+* Applied **debugging techniques** to efficiently solve bugs and optimize code
+
+🔹 **Code Practice & GitHub Updates**
+
+* Committed *DSA-focused C# scenario-based solutions* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Achieved better command over **OOP and DSA fundamentals**
+* Learned structured approaches to **real-world problem solving**
+* Enhanced practical knowledge of **C# programming**
+* Gained valuable hands-on experience through continuous development
+
+🚀 **Next Steps**
+
+* Practice more complex **C# programming scenarios**
+* Learn additional **C# and .NET concepts**
+* Build and explore **real-world software projects**
+
+
+
+🗓️ **Day-27 | C# Scenario-Based Questions and Introduction to Generics**
+**Date:** 19 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on scenario-based problems: *ParcelTracker* and *ExamProctor*
+* In-depth discussion on OOPS concepts with mentors
+* Introduction to **Generics** in C#
+* Enhanced the codebase by adding required methods
+* Used debugging tools to identify and fix issues
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened understanding of OOPS and DSA concepts
+* Learned how to approach real-world problem statements
+* Improved proficiency in C# functionalities
+* Gained hands-on coding experience
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore more C# features and libraries
+* Work on real-world project implementations
+
+
+
+🗓️ **Day-28 | C# Scenario-Based Questions and Collections**
+**Date:** 20 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved scenario-based problems: *Sorting Aadhar Number* and *Password Cracker*
+* Deepened OOPS understanding with mentor guidance
+* Extended AddressBook use cases in the existing codebase
+* Learned and applied **Collections** concepts with additional methods
+* Debugged and resolved issues using debugging tools
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Enhanced knowledge of OOPS and DSA
+* Practiced real-world problem-solving approaches
+* Improved command over C# collections
+* Strengthened practical coding skills
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore additional C# libraries and use cases
+* Apply concepts in practical projects
+
+
+
+🗓️ **Day-29 | C# Scenario-Based Questions and Streams**
+**Date:** 21 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on scenario problems: *EduResults* and *SmartCheckout*
+* Strengthened OOPS concepts with mentor discussions
+* Expanded AddressBook project with additional use cases
+* Learned and implemented **Stream** concepts
+* Used debugging techniques to fix code issues
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *DSA C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved understanding of OOPS and DSA applications
+* Learned practical use of Streams in C#
+* Enhanced problem-solving and debugging skills
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore more real-world implementations
+* Learn additional .NET libraries
+
+
+
+🗓️ **Day-30 | C# Scenario-Based Questions and Exceptions**
+**Date:** 22 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved scenario-based problem: *AmbulanceRoute*
+* Deep dive into **Generics** with mentor support
+* Extended AddressBook project with new methods
+* Learned **Exception Handling** concepts
+* Debugged and resolved coding errors
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Strengthened OOPS and DSA fundamentals
+* Learned structured exception handling in real scenarios
+* Improved practical coding expertise
+
+🚀 **Next Steps**
+
+* Continue practicing advanced C# concepts
+* Explore real-world project use cases
+
+
+
+🗓️ **Day-31 | C# Scenario-Based Questions and Concepts**
+**Date:** 23 Jan 2026
+
+🔹 **Topics Covered**
+
+* Solved problems: *HealthCheckPro* and *EventTracker*
+* Deep dive into **Regex** and **nuint** concepts with mentors
+* Added more functionality to the AddressBook codebase
+* Debugged and improved existing implementations
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Improved knowledge of OOPS and Collections
+* Learned advanced C# concepts like Regex
+* Enhanced real-world problem-solving ability
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Explore advanced C# libraries and applications
+
+
+
+🗓️ **Day-32 | C# Scenario-Based Questions and MSTesting**
+**Date:** 27 Jan 2026
+
+🔹 **Topics Covered**
+
+* In-depth learning of **MSTest** framework with mentors
+* Extended AddressBook project with additional scenarios
+* Revisited Stream concepts during implementation
+* Debugged and optimized code
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Learned unit testing practices using MSTest
+* Strengthened OOPS and DSA application skills
+* Improved debugging and testing techniques
+
+🚀 **Next Steps**
+
+* Continue practicing C# programming concepts
+* Apply testing practices in real projects
+
+
+
+🗓️ **Day-33 | C# Scenario-Based Questions and CSV Data Handling**
+**Date:** 28 Jan 2026
+
+🔹 **Topics Covered**
+
+* Worked on problems: *AeroVigil* and *Bank Account Validation*
+* Deep dive into **Annotations** and **Reflection** with mentors
+* Extended AddressBook project with new functionalities
+* Applied **Stream** concepts for CSV handling
+* Debugged and refined code
+
+🔹 **Code Practice & Pushing to GitHub**
+
+* Pushed *Collections C# scenario-based problems* to the GitHub repository
+
+🎯 **Learning Outcome**
+
+* Gained experience in OOPS and DSA with real scenarios
+* Learned CSV data handling using Streams
+* Improved understanding of Reflection and Annotations
+
+🚀 **Next Steps**
+
+* Continue strengthening C# programming concepts
+* Explore advanced .NET libraries and real-world projects
+
+
+
+🗓️ Day-34 | C# Scenario-Based Questions and JSON Data Handling
+Date: 29 Jan 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problems: StreamBuzz and OceanFleet
+* Explored JSON data handling concepts with mentors
+* Extended AddressBook project with additional use cases
+* Applied Stream concepts and added new methods as required
+* Used debugger extensively to identify and fix issues
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Gained hands-on experience in file and JSON data handling
+* Learned to approach real-life scenario-based problems
+* Enhanced proficiency in C# features and functionality
+
+🚀 Next Steps
+
+* Continue practicing C# programming concepts
+* Explore advanced .NET libraries and real-world project implementations
+
+
+
+🗓️ Day-35 | C# Scenario-Based Questions
+Date: 30 Jan 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problems: Lexical Twist and Future Logistics
+* Deep dive into data design patterns with mentors
+* Continued extending AddressBook project functionalities
+* Applied Stream concepts and added methods as needed
+* Debugged code to resolve errors and improve performance
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Improved understanding of data design patterns
+* Learned to approach real-life C# problems effectively
+* Strengthened functional proficiency in C#
+
+🚀 Next Steps
+
+* Continue practicing scenario-based C# problems
+* Explore more .NET libraries and real-world applications
+
+
+
+🗓️ Day-36 | C# Scenario-Based Questions
+Date: 2 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: Flip-Key-Logical
+* Focused on data patterns and multithreading with mentor guidance
+* Enhanced AddressBook project with additional functionalities
+* Applied Stream concepts and debugging for bug resolution
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Gained experience in multithreading and design patterns
+* Improved approach to real-life C# problems
+* Strengthened hands-on C# coding skills
+
+🚀 Next Steps
+
+* Continue scenario-based C# practice
+* Explore .NET libraries and implement real-world projects
+
+
+
+🗓️ Day-37 | C# Scenario-Based Questions
+Date: 3 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: Factory Robot Hazard Analyzer
+* Deep dive into data principles and design patterns
+* Continued extending AddressBook project with new use cases
+* Applied Stream concepts and added methods as needed
+* Used debugger to fix bugs
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Strengthened knowledge of data design principles
+* Learned to tackle real-world scenario-based challenges
+* Enhanced hands-on C# skills
+
+🚀 Next Steps
+
+* Continue C# programming practice
+* Explore more .NET libraries and project implementations
+
+
+
+🗓️ Day-38 | C# Scenario-Based Questions
+Date: 4 Feb 2026
+
+🔹 Topics Covered
+
+* Focused on multithreading and RDBMS concepts
+* Practiced advanced RDBMS use cases
+* Applied Stream concepts and added new methods
+* Used debugger to identify and fix issues
+
+🎯 Learning Outcome
+
+* Gained experience in multithreading and database handling
+* Strengthened approach to real-life C# problems
+* Improved functional C# proficiency
+
+🚀 Next Steps
+
+* Continue practicing C# programming concepts
+* Explore advanced .NET libraries and real-world projects
+
+
+
+🗓️ Day-39 | C# Scenario-Based Questions
+Date: 5 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: Health Clinic DB Project
+* Explored MSSQL concepts in depth
+* Enhanced HealthClinic project with new use cases
+* Applied Stream concepts and debugging for bug resolution
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed SQL-DBMS C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Strengthened database design and pattern knowledge
+* Learned practical approaches to real-world problems
+* Improved hands-on C# and SQL skills
+
+🚀 Next Steps
+
+* Continue scenario-based C# practice
+* Explore advanced .NET libraries and real-world projects
+
+
+
+🗓️ Day-40 | C# Scenario-Based Questions
+Date: 6 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: TechVille Project
+* Attended Power Skills session via Google Meeting
+* Continued extending HealthClinic project functionalities
+* Applied Stream concepts and debugging techniques
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed SQL-DBMS C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Gained experience in data design patterns
+* Learned real-life problem-solving approaches in C#
+* Improved functional proficiency and hands-on skills
+
+🚀 Next Steps
+
+* Continue C# programming practice
+* Explore .NET libraries and real-world projects
+
+
+
+🗓️ Day-41 | Mock Test Practice
+Date: 7 Feb 2026
+
+🔹 Topics Covered
+
+* Reviewed all previous topics
+* Continued enhancing HealthClinic project with additional use cases
+* Applied Stream concepts and debugging
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed SQL-DBMS C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Strengthened understanding of data design and patterns
+* Gained experience in applying concepts to real-world problems
+* Enhanced C# hands-on skills
+
+🚀 Next Steps
+
+* Continue scenario-based C# practice
+* Explore advanced .NET libraries and project implementations
+
+
+
+🗓️ Day-42 | Mock Test Practice
+Date: 9 Feb 2026
+
+🔹 Topics Covered
+
+* Reviewed all previous topics comprehensively
+* Continued extending HealthClinic project functionalities
+* Applied Stream concepts and debugging
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed SQL-DBMS C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Improved problem-solving for real-life scenarios
+* Enhanced functional and practical C# skills
+
+🚀 Next Steps
+
+* Continue scenario-based C# practice
+* Explore .NET libraries and real-world projects
+
+
+
+🗓️ Day-43 | Mock Test
+Date: 10 Feb 2026
+
+🔹 Test
+
+* Attempted 2 questions from 10:30 to 13:00
+* Attempted 1 question from 15:00 to 17:00
+
+
+
+🗓️ Day-44 | C# Scenario-Based Questions
+Date: 11 Feb 2026
+
+🔹 Topics Covered
+
+* Reviewed and applied all previous topics
+* Extended HealthClinic project with new use cases
+* Applied Stream concepts and debugging
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed SQL-DBMS C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Strengthened data design pattern knowledge
+* Learned approaches to tackle real-world problems in C#
+
+🚀 Next Steps
+
+* Continue C# scenario-based practice
+* Explore advanced .NET libraries and project implementations
+
+
+
+🗓️ Day-45 | C# Scenario-Based Questions
+Date: 12 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: NotifyHub
+* Applied all previous C# topics in project work
+* Added new methods and applied Stream concepts
+* Used debugging to resolve issues
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Gained practical experience in data design patterns
+* Learned to approach real-life scenario-based challenges
+* Strengthened hands-on C# skills
+
+🚀 Next Steps
+
+* Continue scenario-based C# practice
+* Explore .NET libraries and real-world project implementations
+
+
+
+🗓️ Day-46 | C# Scenario-Based Questions
+Date: 13 Feb 2026
+
+🔹 Topics Covered
+
+* Solved scenario-based problem: Email Validator for College Admission Portal
+* Attended Power Skills session via Google Meeting
+* Continued applying all previous topics in HealthClinic project
+* Added new methods and applied Stream concepts
+* Debugged code to resolve issues
+
+🔹 Code Practice & Pushing to GitHub
+
+* Pushed Collections C# scenario-based problems to the GitHub repository
+
+🎯 Learning Outcome
+
+* Gained hands-on experience in data design patterns
+* Learned practical approaches for real-life C# problems
+* Strengthened functional proficiency and debugging skills
+
+🚀 Next Steps
+
+* Continue practicing scenario-based C# problems
+* Explore advanced .NET libraries and real-world projects
+
+* 🗓️ **Day-47 | Address Book Development & Database Integration**
+Date: 14 Feb 2026
+
+🔹 **Topics Covered**
+
+Continued development of Address Book Management System
+Applied full-stack console-based project concepts
+Integrated database functionalities into the project
+Implemented feature enhancements and updates
+
+🔹 **Code Practice & Pushing to GitHub**
+
+Updated Address Book project features
+Tested and validated database operations
+
+🎯 **Learning Outcome**
+
+Improved structured project development approach
+Strengthened database integration and debugging skills
+Enhanced real-world application modeling ability
+
+🚀 **Next Steps**
+
+Revise database concepts
+Explore advanced .NET libraries and real-world projects
+
+---
+
+🗓️ **Day-48 | Address Book Completion & Database Mastery**
+Date: 15 Feb 2026
+
+🔹 **Topics Covered**
+
+Final testing and refinement of Address Book project
+Revision of DBMS concepts
+Revision of ADO.NET architecture
+Database connectivity and CRUD operations
+
+🔹 **Code Practice & Pushing to GitHub**
+
+Completed project with final optimizations
+Practiced database connectivity and ADO.NET implementations
+
+🎯 **Learning Outcome**
+
+Improved confidence in database-driven applications
+Better understanding of ADO.NET architecture
+Stronger debugging and optimization skills
+
+🚀 **Next Steps**
+
+Begin Backend Development using ASP.NET
+
+---
+
+🗓️ **Day-49 | M1 Test Revision & Concept Reinforcement**
+Date: 16 Feb 2026
+
+🔹 **Topics Covered**
+
+Comprehensive revision of:
+C# fundamentals
+OOP principles
+DSA concepts
+Collections
+Multithreading
+DBMS
+
+🔹 **Code Practice & Pushing to GitHub**
+
+Practiced scenario-based problems
+Clarified doubts and revised weak areas
+
+🎯 **Learning Outcome**
+
+Improved confidence for Module 1 (M1) Test
+Strengthened foundational knowledge
+Better conceptual clarity across core subjects
+
+🚀 **Next Steps**
+
+Start learning ASP.NET
+Begin Major Project – Quantity Management App
+
+---
+
+🗓️ **Day-50 | ASP.NET Introduction & Major Project Kickoff**
+Date: 17 Feb 2026
+
+🔹 **Topics Covered**
+
+Introduction to ASP.NET
+Project structure and architecture
+Web Forms and controls
+Event handling in web applications
+Major Project setup – Quantity Management App
+
+🔹 **Code Practice & Pushing to GitHub**
+
+Set up initial project architecture
+Implemented foundational structure for major project
+
+🎯 **Learning Outcome**
+
+Built basic understanding of web development using ASP.NET
+Gained clarity on backend planning and architecture design
+Strengthened transition from console to web applications
+
+🚀 **Next Steps**
+
+Continue development of Quantity Management App
+Explore advanced .NET libraries and real-world projects
+
+---
+
+🗓️ **Day-51 | M1 Mock Test & Project Finalization**
+Date: 18 Feb 2026
+
+🔹 **Topics Covered**
+
+Module 1 Mock Test attempt
+Final refinement of TechVilla project
+Project presentation preparation
+
+🔹 **Code Practice & Pushing to GitHub**
+
+Completed TechVilla project implementation
+Verified features and database functionality
+Performed final testing and debugging
+
+🎯 **Learning Outcome**
+
+Assessed readiness for evaluation
+Strengthened understanding through mock testing
+Improved confidence in project presentation
+
+🚀 **Next Steps**
+
+Present completed projects
+Receive trainer feedback
+Implement suggested improvements
+
+---
+
+✅ **Training Progress:** Successfully transitioning from Console & DBMS development to Web Development & Major Project Architecture 🚀
+
+
 
 
