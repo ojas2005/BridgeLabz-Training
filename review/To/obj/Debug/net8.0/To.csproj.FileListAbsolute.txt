@@ -1,0 +1,14 @@
+/Users/ojastiwari/review/To/bin/Debug/net8.0/To
+/Users/ojastiwari/review/To/bin/Debug/net8.0/To.deps.json
+/Users/ojastiwari/review/To/bin/Debug/net8.0/To.runtimeconfig.json
+/Users/ojastiwari/review/To/bin/Debug/net8.0/To.dll
+/Users/ojastiwari/review/To/bin/Debug/net8.0/To.pdb
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.AssemblyInfoInputs.cache
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.AssemblyInfo.cs
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.csproj.CoreCompileInputs.cache
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.dll
+/Users/ojastiwari/review/To/obj/Debug/net8.0/refint/To.dll
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.pdb
+/Users/ojastiwari/review/To/obj/Debug/net8.0/To.genruntimeconfig.cache
+/Users/ojastiwari/review/To/obj/Debug/net8.0/ref/To.dll
